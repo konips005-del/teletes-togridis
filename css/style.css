@@ -404,8 +404,11 @@ body.menu-open { overflow: hidden; }
 .timeline a.inline { color: var(--green); font-weight: 700; border-bottom: 1px solid var(--brass-2); }
 
 /* Contact */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
-.contact-cards { display: grid; gap: 14px; }
+.contact-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.contact-cards > * { grid-column: span 2; }
+.contact-cards > :nth-child(n+4) { grid-column: span 3; }
+@media (max-width: 1100px) { .contact-cards { grid-template-columns: 1fr 1fr; } .contact-cards > *, .contact-cards > :nth-child(n+4) { grid-column: span 1; } .contact-cards > :nth-child(3) { grid-column: span 2; } }
+@media (max-width: 720px) { .contact-cards { grid-template-columns: 1fr; } .contact-cards > :nth-child(3) { grid-column: span 1; } }
 .contact-card { display: flex; gap: 18px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; transition: border-color .2s, transform .3s var(--ease); }
 a.contact-card:hover { border-color: var(--brass-2); transform: translateY(-3px); }
 .contact-card .ic { width: 52px; height: 52px; border-radius: 50%; background: var(--green); color: var(--brass-soft); display: grid; place-items: center; flex: none; }
@@ -413,21 +416,6 @@ a.contact-card:hover { border-color: var(--brass-2); transform: translateY(-3px)
 .contact-card small { display: block; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); font-weight: 700; }
 .contact-card strong { display: block; font-size: 19px; font-weight: 600; color: var(--ink); word-break: break-word; }
 .contact-card span { display: block; font-size: 14px; color: var(--muted); }
-.form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(26px, 4vw, 42px); }
-.form h2 { font-size: 34px; margin-bottom: 8px; }
-.form > p { color: var(--muted); font-size: 15.5px; }
-.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.field { display: grid; gap: 7px; margin-bottom: 16px; }
-.field label { font-size: 14px; font-weight: 600; color: var(--ink-2); }
-.field input, .field select, .field textarea {
-  font: 400 16px/1.5 var(--sans); color: var(--ink); width: 100%;
-  padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg);
-  transition: border-color .2s, box-shadow .2s, background .2s;
-}
-.field textarea { min-height: 130px; resize: vertical; }
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--brass); background: #fff; box-shadow: 0 0 0 4px rgba(156,124,76,.14); }
-.form .btn { width: 100%; }
-.form .small { font-size: 13px; color: var(--muted); margin: 14px 0 0; text-align: center; }
 .map { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); background: var(--surface-2); aspect-ratio: 21 / 8; }
 .map iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(.35) contrast(1.02); }
 
@@ -480,7 +468,7 @@ a.contact-card:hover { border-color: var(--brass-2); transform: translateY(-3px)
   .sidebar { position: static; grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 960px) {
-  .hero .wrap, .split, .contact-grid { grid-template-columns: 1fr; }
+  .hero .wrap, .split { grid-template-columns: 1fr; }
   .split.reverse > :first-child { order: 0; }
   .split .photo { min-height: 380px; }
   .about-badge { left: 16px; bottom: 16px; }
@@ -523,7 +511,7 @@ a.contact-card:hover { border-color: var(--brass-2); transform: translateY(-3px)
   .service-card { padding: 28px 24px; }
   .steps { grid-template-columns: 1fr; gap: 30px; }
   .step::after { display: none; }
-  .check-list.two, .feature-grid, .form .row, .sidebar { grid-template-columns: 1fr; }
+  .check-list.two, .feature-grid , .sidebar { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom .wrap { flex-direction: column; align-items: flex-start; }
   .faq summary { padding: 18px 20px; font-size: 16px; }

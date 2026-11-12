@@ -64,20 +64,6 @@
     });
   });
 
-  // Contact form → opens email client with prefilled message
-  var form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var f = form.elements;
-      var subject = 'Επικοινωνία από την ιστοσελίδα – ' + (f.topic.value || 'Γενική ερώτηση');
-      var text = 'Ονοματεπώνυμο: ' + f.name.value + '\n' +
-                 'Τηλέφωνο: ' + f.phone.value + '\n' +
-                 'Θέμα: ' + f.topic.value + '\n\n' + f.message.value;
-      window.location.href = 'mailto:' + form.dataset.to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
-    });
-  }
-
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();

@@ -909,9 +909,9 @@ PAGES.append(("/ti-kano-tora/", "0.8"))
 # ================================================================= CONTACT
 contact_body = page_hero([("Αρχική", "/"), ("Επικοινωνία", "/epikoinonia/")],
     "<em>Επικοινωνήστε</em> μαζί μας",
-    "Για άμεση εξυπηρέτηση, προτιμήστε το τηλέφωνο: απαντάμε 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο. Για οτιδήποτε άλλο, στείλτε μας μήνυμα ή επισκεφθείτε μας στο γραφείο.", actions=False) + f"""
+    "Για άμεση εξυπηρέτηση, προτιμήστε το τηλέφωνο: απαντάμε 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο. Για οτιδήποτε άλλο, στείλτε μας email ή επισκεφθείτε μας στο γραφείο.", actions=False) + f"""
 <section class="section">
-  <div class="wrap contact-grid">
+  <div class="wrap">
     <div class="contact-cards">
       <a class="contact-card reveal" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο · 24/7</small><strong>{BIZ['phone']}</strong><span>Η κύρια γραμμή μας</span></span></a>
       <a class="contact-card reveal d1" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong><span>Απευθείας με τον υπεύθυνο</span></span></a>
@@ -919,23 +919,6 @@ contact_body = page_hero([("Αρχική", "/"), ("Επικοινωνία", "/ep
       <a class="contact-card reveal d3" href="{MAPS_LINK}" target="_blank" rel="noopener"><span class="ic">{I['pin']}</span><span><small>Διεύθυνση</small><strong>{BIZ['street']}, {BIZ['city']}</strong><span>Τ.Κ. {BIZ['postal']}, Αττική · Οδηγίες στον χάρτη</span></span></a>
       <div class="contact-card reveal d4"><span class="ic">{I['clock']}</span><span><small>Ωράριο</small><strong>24 ώρες το 24ωρο</strong><span>365 ημέρες τον χρόνο, και σε αργίες</span></span></div>
     </div>
-    <form class="form reveal d1" id="contact-form" data-to="{BIZ['email']}">
-      <h2>Στείλτε μας μήνυμα</h2>
-      <p>Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο. Για επείγοντα, καλέστε μας στο <a href="tel:{BIZ['phone_tel']}" style="color:var(--green);font-weight:700">{BIZ['phone']}</a>.</p>
-      <div class="row">
-        <div class="field"><label for="f-name">Ονοματεπώνυμο</label><input id="f-name" name="name" autocomplete="name" required></div>
-        <div class="field"><label for="f-phone">Τηλέφωνο</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
-      </div>
-      <div class="field"><label for="f-topic">Θέμα</label>
-        <select id="f-topic" name="topic">
-          <option>Γενική ερώτηση</option>""" + "".join(f"<option>{s['title']}</option>" for s in SERVICES) + f"""
-          <option>Προσυνεννόηση / προγραμματισμός</option>
-        </select>
-      </div>
-      <div class="field"><label for="f-msg">Μήνυμα</label><textarea id="f-msg" name="message" required></textarea></div>
-      <button class="btn btn-primary" type="submit">{I['mail']}Αποστολή μηνύματος</button>
-      <p class="small">Το μήνυμα ανοίγει στην εφαρμογή email σας, έτοιμο για αποστολή.</p>
-    </form>
   </div>
 </section>
 <section class="section" style="padding-top:0">
