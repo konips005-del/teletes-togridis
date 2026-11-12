@@ -32,6 +32,10 @@ MAPS_Q = "Κύπρου 74, Αργυρούπολη 164 52"
 MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=" + MAPS_Q.replace(" ", "+")
 MAPS_EMBED = "https://www.google.com/maps?q=" + MAPS_Q.replace(" ", "+") + "&output=embed"
 
+import hashlib
+ASSET_V = hashlib.md5(b"".join(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), f), "rb").read()
+                              for f in ("css/style.css", "js/main.js", "js/fx3d.js"))).hexdigest()[:8]
+
 # Δεύτερο γραφείο (Γλυφάδα)
 BIZ2 = {"street": "Δημ. Γούναρη 11", "city": "Γλυφάδα", "postal": "165 62"}
 MAPS2_Q = "Δημ. Γούναρη 11, Γλυφάδα 165 62"
@@ -248,7 +252,7 @@ def head(path, title, desc, ld):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v={ASSET_V}">
   <script>document.documentElement.classList.add("js");setTimeout(function(){{if(!window.__fx)document.documentElement.classList.remove("js")}},2500)</script>
   <script type="application/ld+json">
 {ld}
@@ -360,8 +364,8 @@ def footer():
   <a class="primary" href="tel:{BIZ['phone_tel']}">{I['phone']}{BIZ['phone']}</a>
   <a href="tel:{BIZ['mobile_tel']}">{I['mobile']}{BIZ['mobile']}</a>
 </div>
-<script src="/js/main.js" defer></script>
-<script type="module" src="/js/fx3d.js"></script>
+<script src="/js/main.js?v={ASSET_V}" defer></script>
+<script type="module" src="/js/fx3d.js?v={ASSET_V}"></script>
 </body>
 </html>
 """
@@ -469,6 +473,7 @@ HOME_FAQ = [
      "Ναι. Διεκπεραιώνουμε τα έγγραφα που απαιτούνται για την κηδεία, όπως η ληξιαρχική πράξη θανάτου και η άδεια ταφής, και σας καθοδηγούμε για όσα ακολουθούν. Δείτε τις <a href=\"/ypiresies/diadikasies/\">γραφειοκρατικές διαδικασίες</a>."),
 ]
 
+MAP_SWITCH = "".join('<button type="button" role="tab" aria-selected="%s" data-src="%s">%s%s</button>' % ("true" if i == 0 else "false", o[5], I["pin"], o[0]) for i, o in enumerate(OFFICES))
 home_body = f"""<section class="hero">
   <div class="hero-bg"><!-- ΦΩΤΟΓΡΑΦΙΑ HERO: βάλε εδώ <img src="/images/hero.jpg" alt=""> --></div>
   <canvas class="fx-particles" aria-hidden="true"></canvas>
@@ -562,8 +567,11 @@ home_body = f"""<section class="hero">
       <p class="lead">Έχουμε δύο γραφεία: στην οδό Κύπρου 74 στην Αργυρούπολη και στην οδό Δημ. Γούναρη 11 στη Γλυφάδα. Εξυπηρετούμε οικογένειες σε όλα τα Νότια Προάστια και την υπόλοιπη Αττική, ενώ αναλαμβάνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό.</p>
       <div class="areas"><span class="main">{AREAS_MAIN}</span>{''.join(f'<span>{a}</span>' for a in AREAS)}</div>
     </div>
-    <div class="map" style="aspect-ratio:4/3.4">
-      <iframe src="{MAPS_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {BIZ['street']}, {BIZ['city']}"></iframe>
+    <div class="map-box">
+      <div class="map-switch" role="tablist" aria-label="Επιλογή γραφείου">{MAP_SWITCH}</div>
+      <div class="map" style="aspect-ratio:4/3.2">
+        <iframe src="{MAPS_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης γραφείων {BIZ['name']}"></iframe>
+      </div>
     </div>
   </div>
 </section>

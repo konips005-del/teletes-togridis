@@ -105,6 +105,18 @@
     });
   });
 
+  // Εναλλαγή χάρτη γραφείων (Αργυρούπολη / Γλυφάδα)
+  document.querySelectorAll('.map-box').forEach(function (box) {
+    var frame = box.querySelector('iframe');
+    var btns = box.querySelectorAll('.map-switch button');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        btns.forEach(function (o) { o.setAttribute('aria-selected', o === b ? 'true' : 'false'); });
+        if (frame.getAttribute('src') !== b.dataset.src) frame.setAttribute('src', b.dataset.src);
+      });
+    });
+  });
+
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();

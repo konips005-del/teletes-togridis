@@ -463,3 +463,10 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
   html.js .rv { opacity: 1; transform: none; transition: none; }
   .hero-bg img { animation: none; }
 }
+
+/* Επιλογή γραφείου στον χάρτη της αρχικής */
+.map-switch { display: flex; gap: 8px; margin-bottom: 12px; }
+.map-switch button { display: inline-flex; align-items: center; gap: 7px; font: 600 15px/1 var(--font); padding: 11px 16px; border-radius: var(--r-sm); border: 1px solid var(--line); background: #fff; color: var(--ink-2); cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+.map-switch button svg { width: 16px; height: 16px; }
+.map-switch button:hover { border-color: var(--green-2); }
+.map-switch button[aria-selected="true"] { background: var(--green); border-color: var(--green); color: #fff; }
