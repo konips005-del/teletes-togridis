@@ -224,6 +224,7 @@ def head(path, title, desc, ld):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add("js");setTimeout(function(){{if(!window.__fx)document.documentElement.classList.remove("js")}},2500)</script>
   <script type="application/ld+json">
 {ld}
   </script>
@@ -334,6 +335,7 @@ def footer():
   <a href="tel:{BIZ['mobile_tel']}">{I['mobile']}{BIZ['mobile']}</a>
 </div>
 <script src="/js/main.js" defer></script>
+<script type="module" src="/js/fx3d.js"></script>
 </body>
 </html>
 """
@@ -370,6 +372,7 @@ def cta_band(title="Είμαστε εδώ, όποια ώρα κι αν μας χ
     return f"""<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="cta-band">
+      <div class="cta-candle" aria-hidden="true"><canvas></canvas></div>
       <div>
         <h2>{title}</h2>
         <p>{text}</p>
@@ -442,6 +445,7 @@ HOME_FAQ = [
 
 home_body = f"""<section class="hero">
   <div class="hero-bg"><!-- ΦΩΤΟΓΡΑΦΙΑ HERO: βάλε εδώ <img src="/images/hero.jpg" alt=""> --></div>
+  <canvas class="fx-particles" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
       <p class="hero-label">Λάζαρος Τογρίδης · Από το 1990</p>

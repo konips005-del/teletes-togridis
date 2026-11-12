@@ -416,3 +416,36 @@ a.contact-card:hover { border-color: var(--green-2); }
   .call-bar a.primary { background: var(--green); color: #fff; border-color: var(--green); }
   .call-bar svg { width: 18px; height: 18px; }
 }
+
+/* =========================================================
+   Κίνηση & 3D (διακριτικά)
+   ========================================================= */
+html.js .rv { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+html.js .rv.in { opacity: 1; transform: none; }
+.tilt { transition: transform .3s ease-out, box-shadow .2s, border-color .15s; will-change: transform; }
+html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-shadow .2s, border-color .15s; transition-delay: 0ms; }
+.hero-card.tilt:hover { box-shadow: 0 28px 60px rgba(0,0,0,.32); }
+
+.fx-particles { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0; transition: opacity 1.6s ease; }
+.fx-particles.on { opacity: 1; }
+.hero-bg img { animation: kenburns 22s ease-out both; }
+@keyframes kenburns { from { transform: scale(1.08); } to { transform: scale(1); } }
+
+.cta-band { grid-template-columns: auto 1fr auto; }
+.cta-candle { width: 120px; height: 170px; margin: -24px 0 -24px -8px; opacity: 0; transition: opacity 1.2s ease; }
+.cta-candle.on { opacity: 1; }
+.cta-candle canvas { width: 100%; height: 100%; display: block; }
+.cta-candle:not(.on) { width: 0; margin: 0; }
+
+@media (max-width: 960px) {
+  .cta-band { grid-template-columns: auto 1fr; }
+  .cta-band .actions { grid-column: 1 / -1; }
+}
+@media (max-width: 720px) {
+  .cta-band { grid-template-columns: 1fr; text-align: left; }
+  .cta-candle { width: 90px; height: 130px; margin: -10px 0 0 -10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js .rv { opacity: 1; transform: none; transition: none; }
+  .hero-bg img { animation: none; }
+}
