@@ -32,8 +32,18 @@ MAPS_Q = "Κύπρου 74, Αργυρούπολη 164 52"
 MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=" + MAPS_Q.replace(" ", "+")
 MAPS_EMBED = "https://www.google.com/maps?q=" + MAPS_Q.replace(" ", "+") + "&output=embed"
 
+# Δεύτερο γραφείο (Γλυφάδα)
+BIZ2 = {"street": "Δημ. Γούναρη 11", "city": "Γλυφάδα", "postal": "165 62"}
+MAPS2_Q = "Δημ. Γούναρη 11, Γλυφάδα 165 62"
+MAPS2_LINK = "https://www.google.com/maps/search/?api=1&query=" + MAPS2_Q.replace(" ", "+")
+MAPS2_EMBED = "https://www.google.com/maps?q=" + MAPS2_Q.replace(" ", "+") + "&output=embed"
+OFFICES = [
+    ("Αργυρούπολη", BIZ["street"], BIZ["city"], BIZ["postal"], MAPS_LINK, MAPS_EMBED),
+    ("Γλυφάδα", BIZ2["street"], BIZ2["city"], BIZ2["postal"], MAPS2_LINK, MAPS2_EMBED),
+]
+
 AREAS_MAIN = "Αργυρούπολη"
-AREAS = ["Ελληνικό", "Γλυφάδα", "Άλιμος", "Άγιος Δημήτριος", "Ηλιούπολη", "Βούλα", "Βάρη",
+AREAS = ["Γλυφάδα", "Ελληνικό", "Άλιμος", "Άγιος Δημήτριος", "Ηλιούπολη", "Βούλα", "Βάρη",
          "Βουλιαγμένη", "Παλαιό Φάληρο", "Νέα Σμύρνη", "Καλλιθέα", "Δάφνη", "Υμηττός", "Όλη η Αττική"]
 
 # ----------------------------------------------------------------- icons
@@ -142,8 +152,8 @@ def business_ld():
         "@type": ["FuneralHome", "LocalBusiness"],
         "@id": url("/#funeralhome"),
         "name": BIZ["name"],
-        "alternateName": ["Γραφείο Τελετών Τογρίδης", "Τογρίδης Γραφείο Τελετών", "Γραφείο Τελετών Αργυρούπολη Τογρίδης"],
-        "description": "Γραφείο τελετών στην Αργυρούπολη από το 1990. Κηδείες, αποτεφρώσεις, μνημόσυνα, επαναπατρισμός σορού και διεκπεραίωση γραφειοκρατικών διαδικασιών, 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.",
+        "alternateName": ["Γραφείο Τελετών Τογρίδης", "Τογρίδης Γραφείο Τελετών", "Γραφείο Τελετών Αργυρούπολη Τογρίδης", "Γραφείο Τελετών Γλυφάδα Τογρίδης"],
+        "description": "Γραφείο τελετών στην Αργυρούπολη και τη Γλυφάδα από το 1990. Κηδείες, αποτεφρώσεις, μνημόσυνα, επαναπατρισμός σορού και διεκπεραίωση γραφειοκρατικών διαδικασιών, 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.",
         "url": url("/"),
         "image": url("/og-image.png"),
         "logo": url("/favicon.svg"),
@@ -160,6 +170,21 @@ def business_ld():
             "addressCountry": "GR",
         },
         "hasMap": MAPS_LINK,
+        "department": [{
+            "@type": ["FuneralHome", "LocalBusiness"],
+            "@id": url("/#glyfada"),
+            "name": BIZ["name"] + " · Γλυφάδα",
+            "url": url("/epikoinonia/"),
+            "image": url("/og-image.png"),
+            "telephone": BIZ["phone_tel"],
+            "email": BIZ["email"],
+            "address": {"@type": "PostalAddress", "streetAddress": BIZ2["street"], "addressLocality": BIZ2["city"],
+                        "postalCode": BIZ2["postal"].replace(" ", ""), "addressRegion": BIZ["region"], "addressCountry": "GR"},
+            "hasMap": MAPS2_LINK,
+            "openingHoursSpecification": {"@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"},
+            "parentOrganization": {"@id": url("/#funeralhome")},
+        }],
         "contactPoint": [
             {"@type": "ContactPoint", "telephone": BIZ["phone_tel"], "contactType": "customer service", "availableLanguage": ["el"], "hoursAvailable": {"@type": "OpeningHoursSpecification", "opens": "00:00", "closes": "23:59", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]}},
             {"@type": "ContactPoint", "telephone": BIZ["mobile_tel"], "contactType": "emergency", "availableLanguage": ["el"]},
@@ -262,7 +287,7 @@ def header(active):
 <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
 <div class="topbar">
   <div class="wrap">
-    <div class="tb-left"><span><span class="dot"></span>Εξυπηρέτηση 24 ώρες, 365 ημέρες</span><span class="hide-sm">{BIZ['street']}, {BIZ['city']}</span></div>
+    <div class="tb-left"><span><span class="dot"></span>Εξυπηρέτηση 24 ώρες, 365 ημέρες</span><span class="hide-sm">Γραφεία σε Αργυρούπολη &amp; Γλυφάδα</span></div>
     <div class="tb-right"><a href="tel:{BIZ['phone_tel']}">{BIZ['phone']}</a><a href="tel:{BIZ['mobile_tel']}">{BIZ['mobile']}</a></div>
   </div>
 </div>
@@ -296,7 +321,7 @@ def footer():
   <div class="wrap footer-grid">
     <div>
       {brand()}
-      <p>Γραφείο τελετών στην Αργυρούπολη από το 1990. Με σεβασμό, αξιοπρέπεια και διακριτικότητα, δίπλα σας στις πιο δύσκολες στιγμές.</p>
+      <p>Γραφείο τελετών στην Αργυρούπολη και τη Γλυφάδα από το 1990. Με σεβασμό, αξιοπρέπεια και διακριτικότητα, δίπλα σας στις πιο δύσκολες στιγμές.</p>
     </div>
     <div>
       <h4>Υπηρεσίες</h4>
@@ -319,6 +344,7 @@ def footer():
         <li>{I['mobile']}<a href="tel:{BIZ['mobile_tel']}"><strong>{BIZ['mobile']}</strong></a></li>
         <li>{I['mail']}<a href="mailto:{BIZ['email']}">{BIZ['email']}</a></li>
         <li>{I['pin']}<a href="{MAPS_LINK}" target="_blank" rel="noopener">{BIZ['street']}, {BIZ['city']} {BIZ['postal']}</a></li>
+        <li>{I['pin']}<a href="{MAPS2_LINK}" target="_blank" rel="noopener">{BIZ2['street']}, {BIZ2['city']} {BIZ2['postal']}</a></li>
         <li>{I['clock']}<span>24 ώρες το 24ωρο, 365 ημέρες</span></li>
       </ul>
     </div>
@@ -434,7 +460,7 @@ HOME_FAQ = [
     ("Τι κάνω αμέσως μόλις συμβεί ένας θάνατος;",
      f"Καλέστε μας στο <a href=\"tel:{BIZ['phone_tel']}\">{BIZ['phone']}</a> ή στο <a href=\"tel:{BIZ['mobile_tel']}\">{BIZ['mobile']}</a>, οποιαδήποτε ώρα. Αν ο θάνατος συνέβη στο σπίτι, χρειάζεται ιατρός για τη βεβαίωση θανάτου, ενώ αν συνέβη σε νοσοκομείο, η βεβαίωση εκδίδεται εκεί. Από εκεί και πέρα αναλαμβάνουμε εμείς. Δείτε αναλυτικά τον οδηγό <a href=\"/ti-kano-tora/\">«Τι κάνω τώρα»</a>."),
     ("Εξυπηρετείτε και εκτός Αργυρούπολης;",
-     "Ναι. Η έδρα μας είναι στην Αργυρούπολη, αλλά εξυπηρετούμε όλα τα Νότια Προάστια και ολόκληρη την Αττική, ενώ οργανώνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό."),
+     "Ναι. Τα γραφεία μας βρίσκονται στην Αργυρούπολη και τη Γλυφάδα, αλλά εξυπηρετούμε όλα τα Νότια Προάστια και ολόκληρη την Αττική, ενώ οργανώνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό."),
     ("Είστε διαθέσιμοι Σαββατοκύριακα και αργίες;",
      "Είμαστε διαθέσιμοι 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο, χωρίς καμία εξαίρεση. Θα μιλήσετε απευθείας με άνθρωπο του γραφείου μας."),
     ("Πόσο κοστίζει μια κηδεία;",
@@ -449,7 +475,7 @@ home_body = f"""<section class="hero">
   <div class="wrap">
     <div>
       <p class="hero-label">Λάζαρος Τογρίδης · Από το 1990</p>
-      <h1 class="hero-title">Γραφείο Τελετών στην Αργυρούπολη</h1>
+      <h1 class="hero-title">Γραφείο Τελετών σε Αργυρούπολη και Γλυφάδα</h1>
       <p class="lead">Οργανώνουμε κηδείες, αποτεφρώσεις και μνημόσυνα με σεβασμό και διακριτικότητα, και αναλαμβάνουμε όλα τα διαδικαστικά. Είμαστε διαθέσιμοι 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="tel:{BIZ['phone_tel']}">{I['phone']}Κλήση 24/7 · {BIZ['phone']}</a>
@@ -467,7 +493,10 @@ home_body = f"""<section class="hero">
         <p>Απαντάμε άμεσα, κάθε ώρα και κάθε ημέρα.</p>
         <a class="phone-row" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Σταθερό · 24ωρη γραμμή</small><strong>{BIZ['phone']}</strong></span></a>
         <a class="phone-row" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong></span></a>
-        <a class="addr" href="{MAPS_LINK}" target="_blank" rel="noopener">{I['pin']}{BIZ['street']}, {BIZ['city']} {BIZ['postal']}</a>
+        <div class="addrs">
+          <a class="addr" href="{MAPS_LINK}" target="_blank" rel="noopener">{I['pin']}<span><b>{BIZ['city']}</b> · {BIZ['street']}</span></a>
+          <a class="addr" href="{MAPS2_LINK}" target="_blank" rel="noopener">{I['pin']}<span><b>{BIZ2['city']}</b> · {BIZ2['street']}</span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -530,7 +559,7 @@ home_body = f"""<section class="hero">
   <div class="wrap split">
     <div>
       <h2 class="section-title">Περιοχές που εξυπηρετούμε</h2>
-      <p class="lead">Το γραφείο μας βρίσκεται στην οδό Κύπρου 74 στην Αργυρούπολη. Εξυπηρετούμε οικογένειες σε όλα τα Νότια Προάστια και την υπόλοιπη Αττική, ενώ αναλαμβάνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό.</p>
+      <p class="lead">Έχουμε δύο γραφεία: στην οδό Κύπρου 74 στην Αργυρούπολη και στην οδό Δημ. Γούναρη 11 στη Γλυφάδα. Εξυπηρετούμε οικογένειες σε όλα τα Νότια Προάστια και την υπόλοιπη Αττική, ενώ αναλαμβάνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό.</p>
       <div class="areas"><span class="main">{AREAS_MAIN}</span>{''.join(f'<span>{a}</span>' for a in AREAS)}</div>
     </div>
     <div class="map" style="aspect-ratio:4/3.4">
@@ -550,8 +579,8 @@ home_body = f"""<section class="hero">
 <div style="height:clamp(72px,9vw,120px)"></div>
 {cta_band()}
 """
-HOME_TITLE = "Γραφείο Τελετών Αργυρούπολη · Λάζαρος Τογρίδης · 24/7 από το 1990"
-HOME_DESC = "Γραφείο Τελετών Λάζαρος Τογρίδης στην Αργυρούπολη, από το 1990. Κηδείες, αποτεφρώσεις, μνημόσυνα, επαναπατρισμός σορού, διαδικαστικά. 24 ώρες, 365 ημέρες: 210 995 2145."
+HOME_TITLE = "Γραφείο Τελετών Αργυρούπολη & Γλυφάδα · Λάζαρος Τογρίδης · 24/7"
+HOME_DESC = "Γραφείο Τελετών Λάζαρος Τογρίδης σε Αργυρούπολη και Γλυφάδα, από το 1990. Κηδείες, αποτεφρώσεις, μνημόσυνα, επαναπατρισμός σορού, διαδικαστικά. 24 ώρες, 365 ημέρες: 210 995 2145."
 build_page("/", HOME_TITLE, HOME_DESC, None, home_body, [faq_ld(HOME_FAQ)])
 PAGES.append(("/", "1.0"))
 
@@ -660,7 +689,7 @@ SVC_CONTENT["kideies"] = {
     ("coffee", "Καφές παρηγοριάς", "Οργάνωση του καφέ της παρηγοριάς μετά την τελετή, σε χώρο κοντά στον ναό."),
 ])}
 <h2>Πώς οργανώνεται μια κηδεία</h2>
-<p>Αμέσως μόλις μας καλέσετε, ερχόμαστε σε επαφή μαζί σας και κανονίζουμε την παραλαβή. Στη συνέχεια συναντιόμαστε, στο γραφείο μας στην Αργυρούπολη ή όπου σας εξυπηρετεί, για να συζητήσουμε τις επιθυμίες σας: τον ναό, το κοιμητήριο, το φέρετρο, τον στολισμό και τα αγγελτήρια.</p>
+<p>Αμέσως μόλις μας καλέσετε, ερχόμαστε σε επαφή μαζί σας και κανονίζουμε την παραλαβή. Στη συνέχεια συναντιόμαστε, σε ένα από τα γραφεία μας (Αργυρούπολη ή Γλυφάδα) ή όπου σας εξυπηρετεί, για να συζητήσουμε τις επιθυμίες σας: τον ναό, το κοιμητήριο, το φέρετρο, τον στολισμό και τα αγγελτήρια.</p>
 <p>Σας δίνουμε από την αρχή μια σαφή εικόνα του κόστους, χωρίς εκπλήξεις. Από εκεί και πέρα αναλαμβάνουμε εμείς τον συντονισμό με τον ναό, το κοιμητήριο, τους ανθοπώλες και τις υπηρεσίες, και διεκπεραιώνουμε τα <a href="/ypiresies/diadikasies/">απαραίτητα έγγραφα</a>.</p>
 {photo("Στολισμός ναού / στεφάνια", motif="flower")}
 <h2>Κηδεία σε άλλη πόλη ή στο χωριό</h2>
@@ -792,8 +821,9 @@ for s in SERVICES:
         <ul class="side-links">{side_links}</ul>
       </div>
       <div class="side-card">
-        <h3>Το γραφείο μας</h3>
-        <p style="margin:0">{BIZ['street']}, {BIZ['city']} {BIZ['postal']}<br><a href="{MAPS_LINK}" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Οδηγίες στον χάρτη →</a></p>
+        <h3>Τα γραφεία μας</h3>
+        <p style="margin:0 0 10px">{BIZ['street']}, {BIZ['city']} {BIZ['postal']}<br><a href="{MAPS_LINK}" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Οδηγίες στον χάρτη →</a></p>
+        <p style="margin:0">{BIZ2['street']}, {BIZ2['city']} {BIZ2['postal']}<br><a href="{MAPS2_LINK}" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Οδηγίες στον χάρτη →</a></p>
       </div>
     </aside>
   </div>
@@ -839,7 +869,7 @@ guide_hosp = tl([
     ("Ενημερωθείτε από το νοσοκομείο", "Το ιατρικό προσωπικό του νοσοκομείου εκδίδει την ιατρική βεβαίωση θανάτου.", False),
     ("Καλέστε μας", f"Στο {CALL}. Επικοινωνούμε εμείς με το νοσοκομείο και αναλαμβάνουμε την παραλαβή της σορού.", True),
     ("Παραλάβετε τα προσωπικά αντικείμενα", "Αν σας ζητηθεί, παραλάβετε τα προσωπικά αντικείμενα του εκλιπόντος από το νοσοκομείο.", False),
-    ("Συναντηθείτε μαζί μας", "Στο γραφείο μας στην Αργυρούπολη ή όπου σας εξυπηρετεί, για να οργανώσουμε μαζί την τελετή.", False),
+    ("Συναντηθείτε μαζί μας", "Στα γραφεία μας σε Αργυρούπολη και Γλυφάδα ή όπου σας εξυπηρετεί, για να οργανώσουμε μαζί την τελετή.", False),
 ])
 guide_abroad = tl([
     ("Καλέστε μας το συντομότερο", f"Στο {CALL}. Όσο νωρίτερα ξεκινήσει η διαδικασία, τόσο πιο γρήγορα ολοκληρώνεται ο επαναπατρισμός.", True),
@@ -898,6 +928,15 @@ build_page("/ti-kano-tora/", "Τι Κάνω Όταν Πεθάνει Κάποιο
 PAGES.append(("/ti-kano-tora/", "0.8"))
 
 # ================================================================= CONTACT
+OFFICES_HTML = "".join(f"""
+      <div class="office">
+        <div class="map"><iframe src="{emb}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {st}, {city}"></iframe></div>
+        <div class="office-info">
+          <span class="ic">{I['pin']}</span>
+          <div><small>Γραφείο {label}</small><strong>{st}, {city}</strong><span>Τ.Κ. {pc}, Αττική</span></div>
+          <a class="btn btn-ghost" href="{link}" target="_blank" rel="noopener">Οδηγίες</a>
+        </div>
+      </div>""" for label, st, city, pc, link, emb in OFFICES)
 contact_body = page_hero([("Αρχική", "/"), ("Επικοινωνία", "/epikoinonia/")],
     "Επικοινωνία",
     "Για άμεση εξυπηρέτηση, προτιμήστε το τηλέφωνο: απαντάμε 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο. Για οτιδήποτε άλλο, στείλτε μας email ή επισκεφθείτε μας στο γραφείο.", actions=False) + f"""
@@ -907,21 +946,21 @@ contact_body = page_hero([("Αρχική", "/"), ("Επικοινωνία", "/ep
       <a class="contact-card" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο · 24/7</small><strong>{BIZ['phone']}</strong><span>Η κύρια γραμμή μας</span></span></a>
       <a class="contact-card" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong><span>Απευθείας με τον υπεύθυνο</span></span></a>
       <a class="contact-card" href="mailto:{BIZ['email']}"><span class="ic">{I['mail']}</span><span><small>Email</small><strong>{BIZ['email']}</strong><span>Για μη επείγουσα επικοινωνία</span></span></a>
-      <a class="contact-card" href="{MAPS_LINK}" target="_blank" rel="noopener"><span class="ic">{I['pin']}</span><span><small>Διεύθυνση</small><strong>{BIZ['street']}, {BIZ['city']}</strong><span>Τ.Κ. {BIZ['postal']}, Αττική · Οδηγίες στον χάρτη</span></span></a>
       <div class="contact-card"><span class="ic">{I['clock']}</span><span><small>Ωράριο</small><strong>24 ώρες το 24ωρο</strong><span>365 ημέρες τον χρόνο, και σε αργίες</span></span></div>
     </div>
   </div>
 </section>
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="map"><iframe src="{MAPS_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {BIZ['street']}, {BIZ['city']}"></iframe></div>
+    <h2 class="section-title">Τα γραφεία μας</h2>
+    <div class="offices">{OFFICES_HTML}</div>
   </div>
 </section>
 """
-build_page("/epikoinonia/", "Επικοινωνία · Γραφείο Τελετών Τογρίδης · Κύπρου 74, Αργυρούπολη",
-           "Επικοινωνήστε με το Γραφείο Τελετών Λάζαρος Τογρίδης, Κύπρου 74, Αργυρούπολη. Τηλ. 210 995 2145, κιν. 694 431 0579. 24 ώρες το 24ωρο, 365 ημέρες.",
+build_page("/epikoinonia/", "Επικοινωνία · Γραφείο Τελετών Τογρίδης · Αργυρούπολη & Γλυφάδα",
+           "Επικοινωνήστε με το Γραφείο Τελετών Λάζαρος Τογρίδης: Κύπρου 74, Αργυρούπολη και Δημ. Γούναρη 11, Γλυφάδα. Τηλ. 210 995 2145, κιν. 694 431 0579. 24 ώρες το 24ωρο, 365 ημέρες.",
            [("Αρχική", "/"), ("Επικοινωνία", "/epikoinonia/")], contact_body,
-           [{"@type": "ContactPage", "url": url("/epikoinonia/"), "mainEntity": {"@id": url("/#funeralhome")}}])
+           [{"@type": "ContactPage", "url": url("/epikoinonia/"), "mainEntity": [{"@id": url("/#funeralhome")}, {"@id": url("/#glyfada")}]}])
 PAGES.append(("/epikoinonia/", "0.9"))
 
 # ================================================================= 404

@@ -151,7 +151,9 @@ body.menu-open { overflow: hidden; }
 .hero-card .phone-row .ic svg { width: 19px; height: 19px; }
 .hero-card .phone-row small { display: block; font-size: 13px; color: var(--muted); }
 .hero-card .phone-row strong { display: block; font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
-.hero-card .addr { display: flex; gap: 8px; align-items: center; font-size: 14.5px; color: var(--muted); margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.hero-card .addrs { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.hero-card .addr { display: flex; gap: 8px; align-items: center; font-size: 14.5px; color: var(--muted); }
+.hero-card .addr b { color: var(--ink, #1a1a1a); font-weight: 600; }
 .hero-card .addr:hover { color: var(--green-2); }
 .hero-card .addr svg { width: 18px; height: 18px; flex: none; }
 
@@ -309,7 +311,7 @@ body.menu-open { overflow: hidden; }
 /* Contact */
 .contact-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
 .contact-cards > * { grid-column: span 2; }
-.contact-cards > :nth-child(n+4) { grid-column: span 3; }
+.contact-cards > :nth-child(n+4) { grid-column: span 6; }
 .contact-card { display: flex; gap: 16px; align-items: center; border: 1px solid var(--line); border-radius: var(--r); padding: 22px; transition: border-color .15s; }
 a.contact-card:hover { border-color: var(--green-2); }
 .contact-card .ic { width: 46px; height: 46px; border-radius: var(--r-sm); background: var(--green); color: #fff; display: grid; place-items: center; flex: none; }
@@ -319,6 +321,18 @@ a.contact-card:hover { border-color: var(--green-2); }
 .contact-card span { display: block; font-size: 14px; color: var(--muted); }
 .map { border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: var(--alt); aspect-ratio: 21 / 8; }
 .map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.offices { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 22px; }
+.office { border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.office .map { border: 0; border-radius: 0; aspect-ratio: 16 / 10; }
+.office-info { display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-top: 1px solid var(--line); }
+.office-info .ic { width: 42px; height: 42px; border-radius: var(--r-sm); background: var(--green); color: #fff; display: grid; place-items: center; flex: none; }
+.office-info .ic svg { width: 19px; height: 19px; }
+.office-info > div { flex: 1; min-width: 0; }
+.office-info small { display: block; font-size: 13px; color: var(--muted); font-weight: 500; }
+.office-info strong { display: block; font-size: 17px; }
+.office-info span { display: block; font-size: 14px; color: var(--muted); }
+.office-info .btn { flex: none; }
+@media (max-width: 760px) { .offices { grid-template-columns: 1fr; } .office-info { flex-wrap: wrap; } .office-info .btn { width: 100%; } }
 
 /* ---------- Footer ---------- */
 .site-footer { background: #121a16; color: rgba(255,255,255,.7); padding: 64px 0 0; font-size: 15px; }
@@ -355,7 +369,7 @@ a.contact-card:hover { border-color: var(--green-2); }
   .sidebar { position: static; grid-template-columns: 1fr 1fr; }
   .contact-cards { grid-template-columns: 1fr 1fr; }
   .contact-cards > *, .contact-cards > :nth-child(n+4) { grid-column: span 1; }
-  .contact-cards > :nth-child(3) { grid-column: span 2; }
+  .contact-cards > :nth-child(3), .contact-cards > :nth-child(4) { grid-column: span 2; }
 }
 @media (max-width: 960px) {
   .hero .wrap, .split { grid-template-columns: 1fr; gap: 40px; }
@@ -405,7 +419,7 @@ a.contact-card:hover { border-color: var(--green-2); }
   .cta-band .actions .btn { flex: 1 1 100%; }
   .page-hero { padding: 40px 0; }
   .contact-cards { grid-template-columns: 1fr; }
-  .contact-cards > :nth-child(3) { grid-column: span 1; }
+  .contact-cards > :nth-child(3), .contact-cards > :nth-child(4) { grid-column: span 1; }
   .call-bar {
     display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
