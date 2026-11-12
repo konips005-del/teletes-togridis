@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teletestogridis.gr/sitemap.xml
