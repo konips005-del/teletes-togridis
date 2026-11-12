@@ -87,7 +87,7 @@ SERVICES = [
         "nav": "Οργάνωση κηδείας από την αρχή ως το τέλος",
         "card": "Αναλαμβάνουμε κάθε λεπτομέρεια της εξόδιας ακολουθίας, ώστε η οικογένεια να σταθεί δίπλα στον άνθρωπό της χωρίς άγχος.",
         "seo_title": "Κηδείες στην Αργυρούπολη · Οργάνωση Κηδείας 24/7",
-        "h1": "Οργάνωση <em>κηδείας</em> με σεβασμό και φροντίδα",
+        "h1": "Οργάνωση κηδείας",
         "desc": "Πλήρης οργάνωση κηδείας στην Αργυρούπολη και τα Νότια Προάστια από το Γραφείο Τελετών Λάζαρος Τογρίδης. Παραλαβή σορού, ναός, κοιμητήριο, στολισμός, αγγελτήρια. 24/7: 210 995 2145.",
         "lead": "Από την πρώτη τηλεφωνική επικοινωνία μέχρι την ολοκλήρωση της εξόδιας ακολουθίας, αναλαμβάνουμε κάθε βήμα με διακριτικότητα, ώστε εσείς να μπορείτε να αφοσιωθείτε στον αποχαιρετισμό.",
     },
@@ -96,7 +96,7 @@ SERVICES = [
         "nav": "Οργάνωση αποτέφρωσης & τεφροδόχοι",
         "card": "Οργανώνουμε την αποτέφρωση σύμφωνα με την ισχύουσα νομοθεσία, με ή χωρίς θρησκευτική τελετή, και φροντίζουμε για την παράδοση της τεφροδόχου.",
         "seo_title": "Αποτέφρωση Νεκρών · Γραφείο Τελετών Αργυρούπολη",
-        "h1": "Αποτέφρωση με <em>αξιοπρέπεια</em> και πλήρη καθοδήγηση",
+        "h1": "Αποτέφρωση",
         "desc": "Οργάνωση αποτέφρωσης από το Γραφείο Τελετών Λάζαρος Τογρίδης στην Αργυρούπολη. Δικαιολογητικά, μεταφορά στο κέντρο αποτέφρωσης, τελετή, τεφροδόχος. 24/7: 210 995 2145.",
         "lead": "Η αποτέφρωση είναι μια επιλογή που όλο και περισσότερες οικογένειες εξετάζουν. Σας εξηγούμε με σαφήνεια τι προβλέπεται, αναλαμβάνουμε τα δικαιολογητικά και οργανώνουμε τα πάντα με τον ίδιο σεβασμό μιας παραδοσιακής τελετής.",
     },
@@ -105,7 +105,7 @@ SERVICES = [
         "nav": "Τρισάγια, 40ήμερα, ετήσια μνημόσυνα",
         "card": "Οργανώνουμε μνημόσυνα και τρισάγια: συνεννόηση με τον ναό, κόλλυβα, αγγελίες και χώρο για τον καφέ της παρηγοριάς.",
         "seo_title": "Μνημόσυνα Αργυρούπολη · Κόλλυβα, 40ήμερα, Ετήσια",
-        "h1": "Μνημόσυνα που <em>τιμούν</em> τη μνήμη",
+        "h1": "Μνημόσυνα",
         "desc": "Οργάνωση μνημοσύνων στην Αργυρούπολη: 9ήμερα, 40ήμερα, εξάμηνα, ετήσια. Κόλλυβα, ναός, αγγελίες, καφές παρηγοριάς. Γραφείο Τελετών Λάζαρος Τογρίδης, 210 995 2145.",
         "lead": "Το μνημόσυνο είναι η στιγμή που η οικογένεια και οι φίλοι ξανασυναντιούνται για να θυμηθούν. Φροντίζουμε ώστε κάθε λεπτομέρεια να είναι έτοιμη, όπως ακριβώς τη θέλετε.",
     },
@@ -114,7 +114,7 @@ SERVICES = [
         "nav": "Μεταφορά σορού από & προς το εξωτερικό",
         "card": "Μεταφορά σορού από το εξωτερικό στην Ελλάδα και αντίστροφα, καθώς και σε κάθε πόλη ή χωριό της χώρας, με όλα τα απαραίτητα έγγραφα.",
         "seo_title": "Επαναπατρισμός Σορού · Μεταφορά Σορού Εξωτερικό",
-        "h1": "Επαναπατρισμός και <em>μεταφορά</em> σορού",
+        "h1": "Επαναπατρισμός και μεταφορά σορού",
         "desc": "Επαναπατρισμός σορού από το εξωτερικό και μεταφορά σορού σε όλη την Ελλάδα. Έγγραφα, προξενεία, αεροπορική μεταφορά. Γραφείο Τελετών Λάζαρος Τογρίδης, 24/7: 210 995 2145.",
         "lead": "Όταν η απώλεια συμβαίνει μακριά από τον τόπο που ο άνθρωπός σας θα ήθελε να αναπαυθεί, αναλαμβάνουμε τη διαδικασία από άκρη σε άκρη, με συνέπεια και διαρκή ενημέρωση της οικογένειας.",
     },
@@ -123,7 +123,7 @@ SERVICES = [
         "nav": "Δικαιολογητικά, ληξιαρχείο, ασφαλιστικά",
         "card": "Διεκπεραιώνουμε τα έγγραφα που απαιτούνται μετά από μια απώλεια και σας καθοδηγούμε σε όσα ακολουθούν.",
         "seo_title": "Διαδικασίες μετά τον Θάνατο · Ληξιαρχική Πράξη, Έξοδα Κηδείας",
-        "h1": "Αναλαμβάνουμε τη <em>γραφειοκρατία</em> για εσάς",
+        "h1": "Γραφειοκρατικές διαδικασίες",
         "desc": "Διεκπεραίωση διαδικασιών μετά από θάνατο: ληξιαρχική πράξη θανάτου, άδεια ταφής, έξοδα κηδείας από τον ΕΦΚΑ. Γραφείο Τελετών Λάζαρος Τογρίδης, Αργυρούπολη, 210 995 2145.",
         "lead": "Τις πρώτες ημέρες μετά από μια απώλεια, η τελευταία σκέψη που πρέπει να σας απασχολεί είναι τα χαρτιά. Αναλαμβάνουμε τα έγγραφα της κηδείας και σας εξηγούμε απλά τι χρειάζεται να γίνει στη συνέχεια.",
     },
@@ -201,7 +201,7 @@ def head(path, title, desc, ld):
   <title>{esc(full_title)}</title>
   <meta name="description" content="{esc(desc)}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-  <meta name="theme-color" content="#22322a">
+  <meta name="theme-color" content="#1c2b24">
   <link rel="canonical" href="{url(path)}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="el_GR">
@@ -222,7 +222,7 @@ def head(path, title, desc, ld):
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">
 {ld}
@@ -369,7 +369,7 @@ def cta_band(title="Είμαστε εδώ, όποια ώρα κι αν μας χ
              text="Μιλήστε απευθείας μαζί μας, ημέρα ή νύχτα, Σαββατοκύριακα και αργίες. Θα σας εξηγήσουμε με ηρεμία τα επόμενα βήματα."):
     return f"""<section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="cta-band reveal">
+    <div class="cta-band">
       <div>
         <h2>{title}</h2>
         <p>{text}</p>
@@ -398,8 +398,7 @@ def faq_ld(items):
 def service_cards(cls="reveal"):
     out = []
     for i, s in enumerate(SERVICES):
-        out.append(f"""<a class="service-card {cls} d{i % 3 + 1}" href="/ypiresies/{s['slug']}/">
-          <span class="num">0{i + 1}</span>
+        out.append(f"""<a class="service-card" href="/ypiresies/{s['slug']}/">
           <span class="ic">{I[s['icon']]}</span>
           <h3>{s['title']}</h3>
           <p>{s['card']}</p>
@@ -442,27 +441,26 @@ HOME_FAQ = [
 ]
 
 home_body = f"""<section class="hero">
+  <div class="hero-bg"><!-- ΦΩΤΟΓΡΑΦΙΑ HERO: βάλε εδώ <img src="/images/hero.jpg" alt=""> --></div>
   <div class="wrap">
     <div>
-      <h1 class="kicker reveal">Γραφείο Τελετών στην Αργυρούπολη</h1>
-      <p class="hero-title reveal d1">Δίπλα σας, με <em>σεβασμό</em> και αξιοπρέπεια, από το 1990.</p>
-      <p class="lead reveal d2">Αναλαμβάνουμε την οργάνωση και τη διεκπεραίωση κάθε τελετής με διακριτικότητα, προσφέροντας στήριξη σε εσάς και την οικογένειά σας, όποια ώρα κι αν μας χρειαστείτε.</p>
-      <div class="hero-actions reveal d3">
+      <p class="hero-label">Λάζαρος Τογρίδης · Από το 1990</p>
+      <h1 class="hero-title">Γραφείο Τελετών στην Αργυρούπολη</h1>
+      <p class="lead">Οργανώνουμε κηδείες, αποτεφρώσεις και μνημόσυνα με σεβασμό και διακριτικότητα, και αναλαμβάνουμε όλα τα διαδικαστικά. Είμαστε διαθέσιμοι 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.</p>
+      <div class="hero-actions">
         <a class="btn btn-primary" href="tel:{BIZ['phone_tel']}">{I['phone']}Κλήση 24/7 · {BIZ['phone']}</a>
         <a class="btn btn-ghost" href="/ti-kano-tora/">Τι κάνω τώρα; {I['arrow']}</a>
       </div>
-      <div class="hero-facts reveal d4">
+      <div class="hero-facts">
         <div><strong>{YEARS}+</strong><span>χρόνια εμπειρίας</span></div>
         <div><strong>24/7</strong><span>365 ημέρες τον χρόνο</span></div>
         <div><strong>1990</strong><span>έτος ίδρυσης</span></div>
       </div>
     </div>
-    <div class="hero-visual reveal d2">
-      <span class="hero-ornament">{OLIVE}</span>
+    <div class="hero-visual">
       <div class="hero-card">
-        <span class="label"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:#7fc29b;display:inline-block"></span>Διαθέσιμοι τώρα</span>
-        <h2>Χρειάζεστε βοήθεια;</h2>
-        <p>Καλέστε μας οποιαδήποτε ώρα. Θα μιλήσετε απευθείας μαζί μας και θα σας καθοδηγήσουμε βήμα προς βήμα.</p>
+        <h2>Επικοινωνήστε μαζί μας</h2>
+        <p>Απαντάμε άμεσα, κάθε ώρα και κάθε ημέρα.</p>
         <a class="phone-row" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Σταθερό · 24ωρη γραμμή</small><strong>{BIZ['phone']}</strong></span></a>
         <a class="phone-row" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong></span></a>
         <a class="addr" href="{MAPS_LINK}" target="_blank" rel="noopener">{I['pin']}{BIZ['street']}, {BIZ['city']} {BIZ['postal']}</a>
@@ -484,10 +482,9 @@ home_body = f"""<section class="hero">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">Οι υπηρεσίες μας</p>
-        <h2 class="section-title reveal d1">Ό,τι χρειάζεται, <em>σε ένα μέρος</em></h2>
+        <h2 class="section-title">Υπηρεσίες</h2>
       </div>
-      <p class="lead reveal d2">Από την οργάνωση της κηδείας μέχρι το μνημόσυνο και τα έγγραφα, αναλαμβάνουμε τα πάντα, ώστε να μη χρειαστεί να τρέξετε πουθενά.</p>
+      <p class="lead">Από την οργάνωση της κηδείας μέχρι το μνημόσυνο και τα έγγραφα, αναλαμβάνουμε τα πάντα, ώστε να μη χρειαστεί να τρέξετε πουθενά.</p>
     </div>
     {service_cards()}
   </div>
@@ -495,17 +492,15 @@ home_body = f"""<section class="hero">
 
 <section class="section alt">
   <div class="wrap split">
-    <div class="about-visual reveal">
+    <div class="about-visual">
       {photo("Το γραφείο ή ο κ. Λάζαρος Τογρίδης", motif="olive")}
-      <div class="about-badge"><strong>{YEARS}+</strong><span>χρόνια<br>κοντά στην οικογένεια</span></div>
     </div>
     <div>
-      <p class="eyebrow reveal">Το γραφείο μας</p>
-      <h2 class="section-title reveal d1">Μια οικογενειακή υπόθεση <em>εμπιστοσύνης</em></h2>
-      <p class="quote reveal d2">«Είμαστε στον χώρο της κοινωνικής εξυπηρέτησης από το 1990, με σεβασμό και αξιοπρέπεια, δίπλα σας στις πιο δύσκολες στιγμές.»</p>
+      <h2 class="section-title">Λίγα λόγια για εμάς</h2>
+      <p class="quote">«Είμαστε στον χώρο της κοινωνικής εξυπηρέτησης από το 1990, με σεβασμό και αξιοπρέπεια, δίπλα σας στις πιο δύσκολες στιγμές.»</p>
       <p class="reveal d2">Ο Λάζαρος Τογρίδης και οι συνεργάτες του αναλαμβάνουν προσωπικά κάθε τελετή. Γνωρίζουμε ότι καμία οικογένεια δεν είναι ίδια με την άλλη, γι’ αυτό ακούμε, προτείνουμε και σεβόμαστε κάθε επιθυμία.</p>
       {check_list(["Προσωπική επικοινωνία με τον υπεύθυνο, όποια ώρα κι αν καλέσετε", "Σαφής ενημέρωση για το κόστος από την αρχή", "Διακριτικότητα σε κάθε στάδιο της διαδικασίας"])}
-      <a class="btn btn-ghost reveal" href="/to-grafeio/">Γνωρίστε μας {I['arrow']}</a>
+      <a class="btn btn-ghost" href="/to-grafeio/">Γνωρίστε μας {I['arrow']}</a>
     </div>
   </div>
 </section>
@@ -514,16 +509,15 @@ home_body = f"""<section class="hero">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <p class="eyebrow reveal">Πώς λειτουργούμε</p>
-        <h2 class="section-title reveal d1">Τέσσερα απλά βήματα</h2>
+        <h2 class="section-title">Πώς λειτουργούμε</h2>
       </div>
-      <p class="lead reveal d2">Μόλις μας καλέσετε, αναλαμβάνουμε την ευθύνη της διαδικασίας και σας κρατάμε ενήμερους σε κάθε στάδιο.</p>
+      <p class="lead">Μόλις μας καλέσετε, αναλαμβάνουμε την ευθύνη της διαδικασίας και σας κρατάμε ενήμερους σε κάθε στάδιο.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><h3>Μας καλείτε</h3><p>Στο {BIZ['phone']} ή στο {BIZ['mobile']}, ημέρα ή νύχτα. Σας ακούμε και σας λέμε τι χρειάζεται άμεσα.</p></div>
-      <div class="step reveal d1"><h3>Ερχόμαστε</h3><p>Παραλαμβάνουμε με σεβασμό τον εκλιπόντα από το σπίτι ή το νοσοκομείο και ερχόμαστε σε επαφή μαζί σας.</p></div>
-      <div class="step reveal d2"><h3>Οργανώνουμε</h3><p>Μαζί αποφασίζουμε για ναό, κοιμητήριο, στολισμό και αγγελτήρια. Εμείς φροντίζουμε τα υπόλοιπα.</p></div>
-      <div class="step reveal d3"><h3>Διεκπεραιώνουμε</h3><p>Αναλαμβάνουμε τα έγγραφα και την τελετή, ώστε εσείς να σταθείτε δίπλα στους δικούς σας.</p></div>
+      <div class="step"><h3>Μας καλείτε</h3><p>Στο {BIZ['phone']} ή στο {BIZ['mobile']}, ημέρα ή νύχτα. Σας ακούμε και σας λέμε τι χρειάζεται άμεσα.</p></div>
+      <div class="step"><h3>Ερχόμαστε</h3><p>Παραλαμβάνουμε με σεβασμό τον εκλιπόντα από το σπίτι ή το νοσοκομείο και ερχόμαστε σε επαφή μαζί σας.</p></div>
+      <div class="step"><h3>Οργανώνουμε</h3><p>Μαζί αποφασίζουμε για ναό, κοιμητήριο, στολισμό και αγγελτήρια. Εμείς φροντίζουμε τα υπόλοιπα.</p></div>
+      <div class="step"><h3>Διεκπεραιώνουμε</h3><p>Αναλαμβάνουμε τα έγγραφα και την τελετή, ώστε εσείς να σταθείτε δίπλα στους δικούς σας.</p></div>
     </div>
   </div>
 </section>
@@ -531,12 +525,11 @@ home_body = f"""<section class="hero">
 <section class="section">
   <div class="wrap split">
     <div>
-      <p class="eyebrow reveal">Περιοχές εξυπηρέτησης</p>
-      <h2 class="section-title reveal d1">Από την Αργυρούπολη, <em>σε όλη την Αττική</em></h2>
-      <p class="lead reveal d2">Το γραφείο μας βρίσκεται στην οδό Κύπρου 74 στην Αργυρούπολη. Εξυπηρετούμε οικογένειες σε όλα τα Νότια Προάστια και την υπόλοιπη Αττική, ενώ αναλαμβάνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό.</p>
-      <div class="areas reveal d3"><span class="main">{AREAS_MAIN}</span>{''.join(f'<span>{a}</span>' for a in AREAS)}</div>
+      <h2 class="section-title">Περιοχές που εξυπηρετούμε</h2>
+      <p class="lead">Το γραφείο μας βρίσκεται στην οδό Κύπρου 74 στην Αργυρούπολη. Εξυπηρετούμε οικογένειες σε όλα τα Νότια Προάστια και την υπόλοιπη Αττική, ενώ αναλαμβάνουμε μεταφορές σορού σε όλη την Ελλάδα και το εξωτερικό.</p>
+      <div class="areas"><span class="main">{AREAS_MAIN}</span>{''.join(f'<span>{a}</span>' for a in AREAS)}</div>
     </div>
-    <div class="map reveal d2" style="aspect-ratio:4/3.4">
+    <div class="map" style="aspect-ratio:4/3.4">
       <iframe src="{MAPS_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {BIZ['street']}, {BIZ['city']}"></iframe>
     </div>
   </div>
@@ -545,8 +538,7 @@ home_body = f"""<section class="hero">
 <section class="section alt">
   <div class="wrap">
     <div class="section-head center">
-      <p class="eyebrow center reveal">Συχνές ερωτήσεις</p>
-      <h2 class="section-title reveal d1">Απαντήσεις σε όσα <em>σας απασχολούν</em></h2>
+      <h2 class="section-title">Συχνές ερωτήσεις</h2>
     </div>
     {faq_html(HOME_FAQ)}
   </div>
@@ -561,20 +553,18 @@ PAGES.append(("/", "1.0"))
 
 # ================================================================= ABOUT
 about_body = page_hero([("Αρχική", "/"), ("Το Γραφείο", "/to-grafeio/")],
-    "Από το 1990, <em>δίπλα</em> στις οικογένειες της Αργυρούπολης",
+    "Το γραφείο",
     "Είμαστε στον χώρο της κοινωνικής εξυπηρέτησης εδώ και πάνω από τρεις δεκαετίες. Αυτό που μας οδηγεί παραμένει ίδιο: σεβασμός στον άνθρωπο που φεύγει και στήριξη σε όσους μένουν.") + f"""
 <section class="section">
   <div class="wrap split">
-    <div class="about-visual reveal">
+    <div class="about-visual">
       {photo("Πορτρέτο του κ. Λάζαρου Τογρίδη", motif="olive")}
-      <div class="about-badge"><strong>1990</strong><span>έτος<br>ίδρυσης</span></div>
     </div>
     <div>
-      <p class="eyebrow reveal">Η ιστορία μας</p>
-      <h2 class="section-title reveal d1">Ένας άνθρωπος, <em>μια δέσμευση</em></h2>
+      <h2 class="section-title">Η ιστορία μας</h2>
       <p class="reveal d2">Το γραφείο τελετών ιδρύθηκε το 1990 από τον Λάζαρο Τογρίδη, με έδρα την Αργυρούπολη. Από την πρώτη ημέρα, η φιλοσοφία μας ήταν απλή: κάθε οικογένεια που μας εμπιστεύεται τον αποχαιρετισμό ενός αγαπημένου της προσώπου αξίζει την ίδια φροντίδα που θα θέλαμε κι εμείς για τους δικούς μας ανθρώπους.</p>
       <p class="reveal d2">Τα χρόνια που πέρασαν μας έδωσαν εμπειρία σε κάθε είδους τελετή: από μια απλή, ήσυχη εξόδιο ακολουθία μέχρι αποτεφρώσεις και επαναπατρισμούς σορού από το εξωτερικό. Αυτό που δεν άλλαξε ποτέ είναι ότι ο υπεύθυνος του γραφείου είναι πάντα διαθέσιμος, 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.</p>
-      <p class="quote reveal d3">«Αναλαμβάνουμε την οργάνωση και τη διεκπεραίωση κάθε τελετής, προσφέροντας στήριξη σε εσάς και την οικογένειά σας.»</p>
+      <p class="quote">«Αναλαμβάνουμε την οργάνωση και τη διεκπεραίωση κάθε τελετής, προσφέροντας στήριξη σε εσάς και την οικογένειά σας.»</p>
     </div>
   </div>
 </section>
@@ -582,13 +572,12 @@ about_body = page_hero([("Αρχική", "/"), ("Το Γραφείο", "/to-graf
 <section class="section alt">
   <div class="wrap">
     <div class="section-head center">
-      <p class="eyebrow center reveal">Οι αξίες μας</p>
-      <h2 class="section-title reveal d1">Ό,τι μας <em>χαρακτηρίζει</em></h2>
+      <h2 class="section-title">Πώς δουλεύουμε</h2>
     </div>
     <div class="values">
-      <div class="value reveal"><span class="ic">{I['heart']}</span><h3>Σεβασμός</h3><p>Στον άνθρωπο που έφυγε, στην πίστη και τις παραδόσεις της οικογένειας, στις επιθυμίες του καθενός.</p></div>
-      <div class="value reveal d1"><span class="ic">{I['shield']}</span><h3>Αξιοπρέπεια</h3><p>Κάθε τελετή οργανώνεται με την ίδια φροντίδα, ανεξάρτητα από το μέγεθος ή τον προϋπολογισμό.</p></div>
-      <div class="value reveal d2"><span class="ic">{I['hands']}</span><h3>Διακριτικότητα</h3><p>Είμαστε παρόντες όπου μας χρειάζεστε και αθόρυβοι όπου πρέπει. Η οικογένεια έρχεται πάντα πρώτη.</p></div>
+      <div class="value"><span class="ic">{I['heart']}</span><h3>Σεβασμός</h3><p>Στον άνθρωπο που έφυγε, στην πίστη και τις παραδόσεις της οικογένειας, στις επιθυμίες του καθενός.</p></div>
+      <div class="value"><span class="ic">{I['shield']}</span><h3>Αξιοπρέπεια</h3><p>Κάθε τελετή οργανώνεται με την ίδια φροντίδα, ανεξάρτητα από το μέγεθος ή τον προϋπολογισμό.</p></div>
+      <div class="value"><span class="ic">{I['hands']}</span><h3>Διακριτικότητα</h3><p>Είμαστε παρόντες όπου μας χρειάζεστε και αθόρυβοι όπου πρέπει. Η οικογένεια έρχεται πάντα πρώτη.</p></div>
     </div>
   </div>
 </section>
@@ -597,10 +586,9 @@ about_body = page_hero([("Αρχική", "/"), ("Το Γραφείο", "/to-graf
   <div class="wrap split reverse">
     <div class="reveal">{photo("Χώρος γραφείου / λεπτομέρεια στολισμού", motif="flower")}</div>
     <div>
-      <p class="eyebrow reveal">Γιατί να μας επιλέξετε</p>
-      <h2 class="section-title reveal d1">Εμπειρία που <em>φαίνεται</em> στις λεπτομέρειες</h2>
+      <h2 class="section-title">Γιατί να μας επιλέξετε</h2>
       {check_list([f"Πάνω από {YEARS} χρόνια εμπειρίας στην Αργυρούπολη και τα Νότια Προάστια", "Άμεση ανταπόκριση 24/7, ακόμη και σε αργίες", "Ένας υπεύθυνος για όλη τη διαδικασία, χωρίς μεσάζοντες", "Διαφάνεια στο κόστος και αναλυτική ενημέρωση", "Διεκπεραίωση όλων των εγγράφων της κηδείας", "Εμπειρία σε αποτεφρώσεις και επαναπατρισμούς"])}
-      <div class="hero-actions reveal" style="margin:0">
+      <div class="hero-actions" style="margin:0">
         <a class="btn btn-primary" href="/ypiresies/">Οι υπηρεσίες μας {I['arrow']}</a>
         <a class="btn btn-ghost" href="/epikoinonia/">Επικοινωνία</a>
       </div>
@@ -617,7 +605,7 @@ PAGES.append(("/to-grafeio/", "0.8"))
 
 # ================================================================= SERVICES INDEX
 svc_index_body = page_hero([("Αρχική", "/"), ("Υπηρεσίες", "/ypiresies/")],
-    "Οι <em>υπηρεσίες</em> μας",
+    "Υπηρεσίες",
     "Κηδείες, αποτεφρώσεις, μνημόσυνα, επαναπατρισμός σορού και διεκπεραίωση της γραφειοκρατίας. Ό,τι χρειαστεί η οικογένεια, το αναλαμβάνουμε με συνέπεια και σεβασμό.") + f"""
 <section class="section">
   <div class="wrap">
@@ -627,9 +615,8 @@ svc_index_body = page_hero([("Αρχική", "/"), ("Υπηρεσίες", "/ypir
 <section class="section alt">
   <div class="wrap split">
     <div>
-      <p class="eyebrow reveal">Ολοκληρωμένη φροντίδα</p>
-      <h2 class="section-title reveal d1">Όλα όσα <em>περιλαμβάνονται</em></h2>
-      <p class="lead reveal d2">Κάθε τελετή προσαρμόζεται στις επιθυμίες της οικογένειας. Ενδεικτικά, μπορούμε να αναλάβουμε:</p>
+      <h2 class="section-title">Τι μπορούμε να αναλάβουμε</h2>
+      <p class="lead">Κάθε τελετή προσαρμόζεται στις επιθυμίες της οικογένειας. Ενδεικτικά, μπορούμε να αναλάβουμε:</p>
     </div>
     <div class="reveal d2">
       {check_list(["Παραλαβή σορού 24/7", "Φέρετρα & στολισμός", "Στεφάνια & ανθοστολισμοί", "Αγγελτήρια & αγγελίες", "Συνεννόηση με ναό & ιερέα", "Κοιμητήρια & ταφή", "Νεκροφόρα & μεταφορές", "Καφές παρηγοριάς", "Κόλλυβα & μνημόσυνα", "Όλα τα έγγραφα"], two=True)}
@@ -810,11 +797,11 @@ for s in SERVICES:
 <section class="section alt">
   <div class="wrap">
     <div class="section-head">
-      <div><p class="eyebrow">Δείτε επίσης</p><h2 class="section-title">Άλλες <em>υπηρεσίες</em></h2></div>
+      <div><h2 class="section-title">Άλλες υπηρεσίες</h2></div>
       <a class="btn btn-ghost" href="/ypiresies/">Όλες οι υπηρεσίες {I['arrow']}</a>
     </div>
     <div class="services-grid">""" + "".join(
-        f"""<a class="service-card reveal d{i+1}" href="/ypiresies/{o['slug']}/"><span class="ic">{I[o['icon']]}</span><h3>{o['title']}</h3><p>{o['card']}</p><span class="more">Περισσότερα {I['arrow']}</span></a>"""
+        f"""<a class="service-card d{i+1}" href="/ypiresies/{o['slug']}/"><span class="ic">{I[o['icon']]}</span><h3>{o['title']}</h3><p>{o['card']}</p><span class="more">Περισσότερα {I['arrow']}</span></a>"""
         for i, o in enumerate(others)) + f"""</div>
   </div>
 </section>
@@ -862,7 +849,7 @@ GUIDE_FAQ = [
     ("Πρέπει να αποφασίσω αμέσως για την κηδεία;", "Όχι. Αφού γίνει η παραλαβή, έχετε τον χρόνο να συζητήσετε με την οικογένεια. Θα σας εξηγήσουμε όλες τις επιλογές με ηρεμία."),
 ]
 guide_body = page_hero([("Αρχική", "/"), ("Τι κάνω τώρα", "/ti-kano-tora/")],
-    "Τι κάνω <em>τώρα</em>;",
+    "Τι κάνω τώρα;",
     "Ένας απλός οδηγός για τα πρώτα βήματα μετά από μια απώλεια. Αν δεν είστε σίγουροι για οτιδήποτε, καλέστε μας: είμαστε εδώ 24 ώρες το 24ωρο.") + f"""
 <section class="section">
   <div class="wrap content-grid">
@@ -908,22 +895,22 @@ PAGES.append(("/ti-kano-tora/", "0.8"))
 
 # ================================================================= CONTACT
 contact_body = page_hero([("Αρχική", "/"), ("Επικοινωνία", "/epikoinonia/")],
-    "<em>Επικοινωνήστε</em> μαζί μας",
+    "Επικοινωνία",
     "Για άμεση εξυπηρέτηση, προτιμήστε το τηλέφωνο: απαντάμε 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο. Για οτιδήποτε άλλο, στείλτε μας email ή επισκεφθείτε μας στο γραφείο.", actions=False) + f"""
 <section class="section">
   <div class="wrap">
     <div class="contact-cards">
-      <a class="contact-card reveal" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο · 24/7</small><strong>{BIZ['phone']}</strong><span>Η κύρια γραμμή μας</span></span></a>
-      <a class="contact-card reveal d1" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong><span>Απευθείας με τον υπεύθυνο</span></span></a>
-      <a class="contact-card reveal d2" href="mailto:{BIZ['email']}"><span class="ic">{I['mail']}</span><span><small>Email</small><strong>{BIZ['email']}</strong><span>Για μη επείγουσα επικοινωνία</span></span></a>
-      <a class="contact-card reveal d3" href="{MAPS_LINK}" target="_blank" rel="noopener"><span class="ic">{I['pin']}</span><span><small>Διεύθυνση</small><strong>{BIZ['street']}, {BIZ['city']}</strong><span>Τ.Κ. {BIZ['postal']}, Αττική · Οδηγίες στον χάρτη</span></span></a>
-      <div class="contact-card reveal d4"><span class="ic">{I['clock']}</span><span><small>Ωράριο</small><strong>24 ώρες το 24ωρο</strong><span>365 ημέρες τον χρόνο, και σε αργίες</span></span></div>
+      <a class="contact-card" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο · 24/7</small><strong>{BIZ['phone']}</strong><span>Η κύρια γραμμή μας</span></span></a>
+      <a class="contact-card" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong><span>Απευθείας με τον υπεύθυνο</span></span></a>
+      <a class="contact-card" href="mailto:{BIZ['email']}"><span class="ic">{I['mail']}</span><span><small>Email</small><strong>{BIZ['email']}</strong><span>Για μη επείγουσα επικοινωνία</span></span></a>
+      <a class="contact-card" href="{MAPS_LINK}" target="_blank" rel="noopener"><span class="ic">{I['pin']}</span><span><small>Διεύθυνση</small><strong>{BIZ['street']}, {BIZ['city']}</strong><span>Τ.Κ. {BIZ['postal']}, Αττική · Οδηγίες στον χάρτη</span></span></a>
+      <div class="contact-card"><span class="ic">{I['clock']}</span><span><small>Ωράριο</small><strong>24 ώρες το 24ωρο</strong><span>365 ημέρες τον χρόνο, και σε αργίες</span></span></div>
     </div>
   </div>
 </section>
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <div class="map reveal"><iframe src="{MAPS_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {BIZ['street']}, {BIZ['city']}"></iframe></div>
+    <div class="map"><iframe src="{MAPS_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {BIZ['street']}, {BIZ['city']}"></iframe></div>
   </div>
 </section>
 """
