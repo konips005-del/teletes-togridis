@@ -37,13 +37,13 @@ ASSET_V = hashlib.md5(b"".join(open(os.path.join(os.path.dirname(os.path.dirname
                               for f in ("css/style.css", "js/main.js", "js/fx3d.js"))).hexdigest()[:8]
 
 # Δεύτερο γραφείο (Γλυφάδα)
-BIZ2 = {"street": "Δημ. Γούναρη 11", "city": "Γλυφάδα", "postal": "165 62"}
+BIZ2 = {"street": "Δημ. Γούναρη 11", "city": "Γλυφάδα", "postal": "165 62", "phone": "210 960 5670", "phone_tel": "+302109605670"}
 MAPS2_Q = "Δημ. Γούναρη 11, Γλυφάδα 165 62"
 MAPS2_LINK = "https://www.google.com/maps/search/?api=1&query=" + MAPS2_Q.replace(" ", "+")
 MAPS2_EMBED = "https://www.google.com/maps?q=" + MAPS2_Q.replace(" ", "+") + "&output=embed"
 OFFICES = [
-    ("Αργυρούπολη", BIZ["street"], BIZ["city"], BIZ["postal"], MAPS_LINK, MAPS_EMBED),
-    ("Γλυφάδα", BIZ2["street"], BIZ2["city"], BIZ2["postal"], MAPS2_LINK, MAPS2_EMBED),
+    ("Αργυρούπολη", BIZ["street"], BIZ["city"], BIZ["postal"], MAPS_LINK, MAPS_EMBED, BIZ["phone"], BIZ["phone_tel"]),
+    ("Γλυφάδα", BIZ2["street"], BIZ2["city"], BIZ2["postal"], MAPS2_LINK, MAPS2_EMBED, BIZ2["phone"], BIZ2["phone_tel"]),
 ]
 
 AREAS_MAIN = "Αργυρούπολη"
@@ -180,7 +180,7 @@ def business_ld():
             "name": BIZ["name"] + " · Γλυφάδα",
             "url": url("/epikoinonia/"),
             "image": url("/og-image.png"),
-            "telephone": BIZ["phone_tel"],
+            "telephone": BIZ2["phone_tel"],
             "email": BIZ["email"],
             "address": {"@type": "PostalAddress", "streetAddress": BIZ2["street"], "addressLocality": BIZ2["city"],
                         "postalCode": BIZ2["postal"].replace(" ", ""), "addressRegion": BIZ["region"], "addressCountry": "GR"},
@@ -346,7 +346,8 @@ def footer():
     <div>
       <h4>Επικοινωνία</h4>
       <ul class="f-contact">
-        <li>{I['phone']}<a href="tel:{BIZ['phone_tel']}"><strong>{BIZ['phone']}</strong></a></li>
+        <li>{I['phone']}<a href="tel:{BIZ['phone_tel']}"><strong>{BIZ['phone']}</strong></a>&nbsp;· {BIZ['city']}</li>
+        <li>{I['phone']}<a href="tel:{BIZ2['phone_tel']}"><strong>{BIZ2['phone']}</strong></a>&nbsp;· {BIZ2['city']}</li>
         <li>{I['mobile']}<a href="tel:{BIZ['mobile_tel']}"><strong>{BIZ['mobile']}</strong></a></li>
         <li>{I['mail']}<a href="mailto:{BIZ['email']}">{BIZ['email']}</a></li>
         <li>{I['pin']}<a href="{MAPS_LINK}" target="_blank" rel="noopener">{BIZ['street']}, {BIZ['city']} {BIZ['postal']}</a></li>
@@ -502,7 +503,7 @@ home_body = f"""<section class="hero">
       <div class="hero-card">
         <h2>Επικοινωνήστε μαζί μας</h2>
         <p>Απαντάμε άμεσα, κάθε ώρα και κάθε ημέρα.</p>
-        <div class="phone-row"><span class="ic">{I['phone']}</span><span><small>Σταθερά · 24ωρη γραμμή</small><strong><a href="tel:{BIZ['phone_tel']}">{BIZ['phone']}</a></strong><strong><a href="tel:+302109605670">210 960 5670</a></strong></span></div>
+        <div class="phone-row"><span class="ic">{I['phone']}</span><span><small>Σταθερά · 24ωρη γραμμή</small><strong><a href="tel:{BIZ['phone_tel']}">{BIZ['phone']}</a><em>{BIZ['city']}</em></strong><strong><a href="tel:{BIZ2['phone_tel']}">{BIZ2['phone']}</a><em>{BIZ2['city']}</em></strong></span></div>
         <a class="phone-row" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong></span></a>
         <div class="addrs">
           <a class="addr" href="{MAPS_LINK}" target="_blank" rel="noopener">{I['pin']}<span><b>{BIZ['city']}</b> · {BIZ['street']}</span></a>
@@ -993,17 +994,18 @@ OFFICES_HTML = "".join(f"""
         <div class="map"><iframe src="{emb}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Χάρτης: {BIZ['name']}, {st}, {city}"></iframe></div>
         <div class="office-info">
           <span class="ic">{I['pin']}</span>
-          <div><small>Γραφείο {label}</small><strong>{st}, {city}</strong><span>Τ.Κ. {pc}, Αττική</span></div>
+          <div><small>Γραφείο {label}</small><strong>{st}, {city}</strong><span>Τ.Κ. {pc}, Αττική · Τηλ. <a href="tel:{tel}">{ph}</a></span></div>
           <a class="btn btn-ghost" href="{link}" target="_blank" rel="noopener">Οδηγίες</a>
         </div>
-      </div>""" for label, st, city, pc, link, emb in OFFICES)
+      </div>""" for label, st, city, pc, link, emb, ph, tel in OFFICES)
 contact_body = page_hero([("Αρχική", "/"), ("Επικοινωνία", "/epikoinonia/")],
     "Επικοινωνία",
     "Για άμεση εξυπηρέτηση, προτιμήστε το τηλέφωνο: απαντάμε 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο. Για οτιδήποτε άλλο, στείλτε μας email ή επισκεφθείτε μας στο γραφείο.", actions=False) + f"""
 <section class="section">
   <div class="wrap">
     <div class="contact-cards">
-      <a class="contact-card" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο · 24/7</small><strong>{BIZ['phone']}</strong><span>Η κύρια γραμμή μας</span></span></a>
+      <a class="contact-card" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο · 24/7</small><strong>{BIZ['phone']}</strong><span>Αργυρούπολη · η κύρια γραμμή μας</span></span></a>
+      <a class="contact-card" href="tel:{BIZ2['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Τηλέφωνο Γλυφάδας</small><strong>{BIZ2['phone']}</strong><span>Γραφείο Γλυφάδας</span></span></a>
       <a class="contact-card" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong><span>Απευθείας με τον υπεύθυνο</span></span></a>
       <a class="contact-card" href="mailto:{BIZ['email']}"><span class="ic">{I['mail']}</span><span><small>Email</small><strong>{BIZ['email']}</strong><span>Για μη επείγουσα επικοινωνία</span></span></a>
       <div class="contact-card"><span class="ic">{I['clock']}</span><span><small>Ωράριο</small><strong>24 ώρες το 24ωρο</strong><span>365 ημέρες τον χρόνο, και σε αργίες</span></span></div>

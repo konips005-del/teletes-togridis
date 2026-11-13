@@ -311,7 +311,7 @@ body.menu-open { overflow: hidden; }
 /* Contact */
 .contact-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
 .contact-cards > * { grid-column: span 2; }
-.contact-cards > :nth-child(n+4) { grid-column: span 6; }
+.contact-cards > :nth-child(n+4) { grid-column: span 3; }
 .contact-card { display: flex; gap: 16px; align-items: center; border: 1px solid var(--line); border-radius: var(--r); padding: 22px; transition: border-color .15s; }
 a.contact-card:hover { border-color: var(--green-2); }
 .contact-card .ic { width: 46px; height: 46px; border-radius: var(--r-sm); background: var(--green); color: #fff; display: grid; place-items: center; flex: none; }
@@ -369,7 +369,7 @@ a.contact-card:hover { border-color: var(--green-2); }
   .sidebar { position: static; grid-template-columns: 1fr 1fr; }
   .contact-cards { grid-template-columns: 1fr 1fr; }
   .contact-cards > *, .contact-cards > :nth-child(n+4) { grid-column: span 1; }
-  .contact-cards > :nth-child(3), .contact-cards > :nth-child(4) { grid-column: span 2; }
+  .contact-cards > :nth-child(5) { grid-column: span 2; }
 }
 @media (max-width: 960px) {
   .hero .wrap, .split { grid-template-columns: 1fr; gap: 40px; }
@@ -419,7 +419,7 @@ a.contact-card:hover { border-color: var(--green-2); }
   .cta-band .actions .btn { flex: 1 1 100%; }
   .page-hero { padding: 40px 0; }
   .contact-cards { grid-template-columns: 1fr; }
-  .contact-cards > :nth-child(3), .contact-cards > :nth-child(4) { grid-column: span 1; }
+  .contact-cards > :nth-child(5) { grid-column: span 1; }
   .call-bar {
     display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
@@ -498,3 +498,5 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
 @media (max-width: 520px) { .coffins { grid-template-columns: 1fr; } }
 @media (max-width: 1600px) { .header-cta .btn-ghost { display: none; } }
 .hero-card .phone-row strong a:hover { color: var(--green); text-decoration: underline; }
+.hero-card .phone-row strong em { font-style: normal; font-weight: 400; font-size: 13px; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+.office-info span a { color: var(--green); font-weight: 600; }
