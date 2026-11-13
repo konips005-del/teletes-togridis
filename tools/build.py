@@ -605,7 +605,7 @@ about_body = page_hero([("Αρχική", "/"), ("Το Γραφείο", "/to-graf
 <section class="section">
   <div class="wrap split">
     <div class="about-visual">
-      {photo("Ο Λάζαρος Τογρίδης", src="lazaros-togridis.jpg", pos="center 30%")}
+      {photo("Η πρόσοψη του γραφείου τελετών Τογρίδη στην Κύπρου 74, Αργυρούπολη", src="grafeio-prosopsi.jpg", pos="center 70%")}
     </div>
     <div>
       <h2 class="section-title">Η ιστορία μας</h2>
