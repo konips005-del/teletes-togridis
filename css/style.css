@@ -470,3 +470,8 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
 .map-switch button svg { width: 16px; height: 16px; }
 .map-switch button:hover { border-color: var(--green-2); }
 .map-switch button[aria-selected="true"] { background: var(--green); border-color: var(--green); color: #fff; }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.gallery .photo { min-height: 0; aspect-ratio: 3 / 4; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }

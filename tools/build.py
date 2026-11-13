@@ -370,8 +370,12 @@ def footer():
 </html>
 """
 
-def photo(alt_hint, cls="", motif="flower"):
-    # Θέση φωτογραφίας: όταν έρθουν οι εικόνες, πρόσθεσε μέσα <img src="/images/…" alt="…">
+def photo(alt_hint, cls="", motif="flower", src=None, pos=None):
+    # Θέση φωτογραφίας: με src εμφανίζεται η εικόνα, αλλιώς το διακοσμητικό μοτίβο
+    if src:
+        style = f' style="object-position:{pos}"' if pos else ""
+        return (f'<figure class="photo has-img {cls}"><img src="/images/{src}" alt="{esc(alt_hint)}" '
+                f'loading="lazy" decoding="async"{style}></figure>')
     return (f'<figure class="photo {cls}" data-photo="{esc(alt_hint)}">'
             f'<!-- ΦΩΤΟΓΡΑΦΙΑ: {alt_hint} -->'
             f'<span class="ph-motif">{OLIVE if motif == "olive" else I[motif]}</span></figure>')
@@ -475,7 +479,7 @@ HOME_FAQ = [
 
 MAP_SWITCH = "".join('<button type="button" role="tab" aria-selected="%s" data-src="%s">%s%s</button>' % ("true" if i == 0 else "false", o[5], I["pin"], o[0]) for i, o in enumerate(OFFICES))
 home_body = f"""<section class="hero">
-  <div class="hero-bg"><!-- ΦΩΤΟΓΡΑΦΙΑ HERO: βάλε εδώ <img src="/images/hero.jpg" alt=""> --></div>
+  <div class="hero-bg"><img src="/images/hero.jpg" alt="" fetchpriority="high"></div>
   <canvas class="fx-particles" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
@@ -531,7 +535,7 @@ home_body = f"""<section class="hero">
 <section class="section alt">
   <div class="wrap split">
     <div class="about-visual">
-      {photo("Το γραφείο ή ο κ. Λάζαρος Τογρίδης", motif="olive")}
+      {photo("Η πρόσοψη του γραφείου τελετών Τογρίδη στην Κύπρου 74, Αργυρούπολη", src="grafeio-prosopsi.jpg", pos="center 70%")}
     </div>
     <div>
       <h2 class="section-title">Λίγα λόγια για εμάς</h2>
@@ -599,7 +603,7 @@ about_body = page_hero([("Αρχική", "/"), ("Το Γραφείο", "/to-graf
 <section class="section">
   <div class="wrap split">
     <div class="about-visual">
-      {photo("Πορτρέτο του κ. Λάζαρου Τογρίδη", motif="olive")}
+      {photo("Ο Λάζαρος Τογρίδης", src="lazaros-togridis.jpg", pos="center 30%")}
     </div>
     <div>
       <h2 class="section-title">Η ιστορία μας</h2>
@@ -624,8 +628,23 @@ about_body = page_hero([("Αρχική", "/"), ("Το Γραφείο", "/to-graf
 </section>
 
 <section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <h2 class="section-title">Από τη δουλειά μας</h2>
+      <p class="lead">Στολισμός ναών και στεφάνια, με προσοχή σε κάθε λεπτομέρεια.</p>
+    </div>
+    <div class="gallery">
+      {photo("Στολισμός ναού με λευκά λουλούδια", src="stolismos-naou.jpg")}
+      {photo("Ναός στολισμένος με λουλούδια και κεριά", src="hero.jpg")}
+      {photo("Στεφάνια με λευκά και κίτρινα λουλούδια", src="stefania.jpg")}
+      {photo("Στολισμός ναού με κόκκινο διάδρομο", src="stolismos-naou-3.jpg")}
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
   <div class="wrap split reverse">
-    <div class="reveal">{photo("Χώρος γραφείου / λεπτομέρεια στολισμού", motif="flower")}</div>
+    <div class="reveal">{photo("Η πινακίδα των Τελετών Τογρίδη στην Αργυρούπολη", src="pinakida.jpg", pos="center 40%")}</div>
     <div>
       <h2 class="section-title">Γιατί να μας επιλέξετε</h2>
       {check_list([f"Πάνω από {YEARS} χρόνια εμπειρίας στην Αργυρούπολη και τα Νότια Προάστια", "Άμεση ανταπόκριση 24/7, ακόμη και σε αργίες", "Ένας υπεύθυνος για όλη τη διαδικασία, χωρίς μεσάζοντες", "Διαφάνεια στο κόστος και αναλυτική ενημέρωση", "Διεκπεραίωση όλων των εγγράφων της κηδείας", "Εμπειρία σε αποτεφρώσεις και επαναπατρισμούς"])}
@@ -699,7 +718,7 @@ SVC_CONTENT["kideies"] = {
 <h2>Πώς οργανώνεται μια κηδεία</h2>
 <p>Αμέσως μόλις μας καλέσετε, ερχόμαστε σε επαφή μαζί σας και κανονίζουμε την παραλαβή. Στη συνέχεια συναντιόμαστε, σε ένα από τα γραφεία μας (Αργυρούπολη ή Γλυφάδα) ή όπου σας εξυπηρετεί, για να συζητήσουμε τις επιθυμίες σας: τον ναό, το κοιμητήριο, το φέρετρο, τον στολισμό και τα αγγελτήρια.</p>
 <p>Σας δίνουμε από την αρχή μια σαφή εικόνα του κόστους, χωρίς εκπλήξεις. Από εκεί και πέρα αναλαμβάνουμε εμείς τον συντονισμό με τον ναό, το κοιμητήριο, τους ανθοπώλες και τις υπηρεσίες, και διεκπεραιώνουμε τα <a href="/ypiresies/diadikasies/">απαραίτητα έγγραφα</a>.</p>
-{photo("Στολισμός ναού / στεφάνια", motif="flower")}
+{photo("Στολισμός ναού με λευκά λουλούδια για εξόδιο ακολουθία", src="stolismos-naou.jpg")}
 <h2>Κηδεία σε άλλη πόλη ή στο χωριό</h2>
 <p>Πολλές οικογένειες επιθυμούν η ταφή να γίνει στον τόπο καταγωγής. Αναλαμβάνουμε τη <a href="/ypiresies/epanapatrismos/">μεταφορά της σορού</a> σε οποιοδήποτε σημείο της Ελλάδας και τον συντονισμό με την τοπική ενορία και το κοιμητήριο.</p>
 {note("Αν ο θάνατος συνέβη στο σπίτι, χρειάζεται πρώτα ιατρός για να εκδώσει την ιατρική βεβαίωση θανάτου. Αν δεν γνωρίζετε ποιον να καλέσετε, τηλεφωνήστε μας και θα σας καθοδηγήσουμε.")}
@@ -725,7 +744,7 @@ SVC_CONTENT["apotefroseis"] = {
 ])}
 <h2>Πώς ξεκινάμε</h2>
 <p>Καλέστε μας και θα σας εξηγήσουμε τα βήματα και τα δικαιολογητικά που χρειάζονται για τη δική σας περίπτωση. Αναλαμβάνουμε την επικοινωνία με το κέντρο αποτέφρωσης, τον προγραμματισμό και τη μεταφορά, και σας ενημερώνουμε σε κάθε στάδιο.</p>
-{photo("Τεφροδόχος / χώρος τελετής", motif="urn")}
+{photo("Ναός στολισμένος για τελετή αποχαιρετισμού", src="stolismos-naou-2.jpg")}
 {note("Αν ο εκλιπών είχε εκφράσει γραπτώς την επιθυμία του για αποτέφρωση, φέρτε μαζί σας το σχετικό έγγραφο. Αν όχι, δεν πειράζει: θα σας εξηγήσουμε τι προβλέπεται.")}
 """,
     "faq": [
@@ -747,7 +766,7 @@ SVC_CONTENT["mnimosyna"] = {
 ])}
 <h2>Οργάνωση με μία μόνο κλήση</h2>
 <p>Μας λέτε την ημερομηνία και τον ναό, και αναλαμβάνουμε τα υπόλοιπα: από τα κόλλυβα και τα κεριά μέχρι τις αγγελίες και τον χώρο για τον καφέ. Μπορούμε επίσης να σας υπενθυμίσουμε τις ημερομηνίες των επόμενων μνημοσύνων.</p>
-{photo("Κόλλυβα / τραπέζι μνημοσύνου", motif="candle")}
+{photo("Ναός στολισμένος με λευκά λουλούδια και κεριά", src="stolismos-naou-3.jpg")}
 """,
     "faq": [
         ("Πότε γίνονται τα μνημόσυνα;", "Συνήθως στις 3 και 9 ημέρες, στις 40 ημέρες, στους 3 και 6 μήνες, και στον 1 χρόνο από τον θάνατο. Τα μνημόσυνα τελούνται συνήθως Σάββατο ή Κυριακή μετά τη Θεία Λειτουργία."),

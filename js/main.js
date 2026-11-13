@@ -43,7 +43,7 @@
     '.page-hero .breadcrumbs,.page-hero h1,.page-hero .lead,.page-hero .hero-actions,' +
     '.trust-item,.section-title,.section-head > .lead,.service-card,.split .photo,.split p,.split .quote,' +
     '.check-list li,.step,.areas,.map,.faq details,.cta-band,.value,.feature,.contact-card,.side-card,' +
-    '.office,.timeline li,.prose > h2,.prose > p,.prose .photo,.note,.guide-tabs';
+    '.gallery .photo,.office,.timeline li,.prose > h2,.prose > p,.prose .photo,.note,.guide-tabs';
   var els = Array.prototype.slice.call(document.querySelectorAll(SEL));
   if (!reduce && 'IntersectionObserver' in window) {
     els.forEach(function (el) {
