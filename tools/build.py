@@ -502,7 +502,7 @@ home_body = f"""<section class="hero">
       <div class="hero-card">
         <h2>Επικοινωνήστε μαζί μας</h2>
         <p>Απαντάμε άμεσα, κάθε ώρα και κάθε ημέρα.</p>
-        <a class="phone-row" href="tel:{BIZ['phone_tel']}"><span class="ic">{I['phone']}</span><span><small>Σταθερό · 24ωρη γραμμή</small><strong>{BIZ['phone']}</strong></span></a>
+        <div class="phone-row"><span class="ic">{I['phone']}</span><span><small>Σταθερά · 24ωρη γραμμή</small><strong><a href="tel:{BIZ['phone_tel']}">{BIZ['phone']}</a></strong><strong><a href="tel:+302109605670">210 960 5670</a></strong></span></div>
         <a class="phone-row" href="tel:{BIZ['mobile_tel']}"><span class="ic">{I['mobile']}</span><span><small>Κινητό</small><strong>{BIZ['mobile']}</strong></span></a>
         <div class="addrs">
           <a class="addr" href="{MAPS_LINK}" target="_blank" rel="noopener">{I['pin']}<span><b>{BIZ['city']}</b> · {BIZ['street']}</span></a>

@@ -497,3 +497,4 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
 @media (max-width: 900px) { .coffins { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; } }
 @media (max-width: 520px) { .coffins { grid-template-columns: 1fr; } }
 @media (max-width: 1600px) { .header-cta .btn-ghost { display: none; } }
+.hero-card .phone-row strong a:hover { color: var(--green); text-decoration: underline; }
