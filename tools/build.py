@@ -160,7 +160,7 @@ def business_ld():
         "description": "Γραφείο τελετών στην Αργυρούπολη και τη Γλυφάδα από το 1990. Κηδείες, αποτεφρώσεις, μνημόσυνα, επαναπατρισμός σορού και διεκπεραίωση γραφειοκρατικών διαδικασιών, 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.",
         "url": url("/"),
         "image": url("/og-image.png"),
-        "logo": url("/favicon.svg"),
+        "logo": url("/logo.png"),
         "telephone": BIZ["phone_tel"],
         "email": BIZ["email"],
         "foundingDate": str(BIZ["since"]),
@@ -247,7 +247,10 @@ def head(path, title, desc, ld):
   <meta name="twitter:description" content="{esc(desc)}">
   <meta name="twitter:image" content="{url('/og-image.png')}?v=2">
   <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
