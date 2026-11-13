@@ -238,14 +238,14 @@ def head(path, title, desc, ld):
   <meta property="og:title" content="{esc(full_title)}">
   <meta property="og:description" content="{esc(desc)}">
   <meta property="og:url" content="{url(path)}">
-  <meta property="og:image" content="{url('/og-image.png')}">
+  <meta property="og:image" content="{url('/og-image.png')}?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{esc(BIZ['name'])} · Αργυρούπολη, 24/7">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{esc(full_title)}">
   <meta name="twitter:description" content="{esc(desc)}">
-  <meta name="twitter:image" content="{url('/og-image.png')}">
+  <meta name="twitter:image" content="{url('/og-image.png')}?v=2">
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
