@@ -218,7 +218,7 @@ def graph(path, title, desc, crumbs, extra=None):
     nodes += extra or []
     return json.dumps({"@context": "https://schema.org", "@graph": nodes}, ensure_ascii=False, indent=2)
 
-NAV = [("Αρχική", "/"), ("Το Γραφείο", "/to-grafeio/"), ("Υπηρεσίες", "/ypiresies/"), ("Τι κάνω τώρα", "/ti-kano-tora/"), ("Επικοινωνία", "/epikoinonia/")]
+NAV = [("Αρχική", "/"), ("Το Γραφείο", "/to-grafeio/"), ("Υπηρεσίες", "/ypiresies/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/"), ("Τι κάνω τώρα", "/ti-kano-tora/"), ("Επικοινωνία", "/epikoinonia/")]
 
 def head(path, title, desc, ld):
     full_title = title
@@ -338,6 +338,7 @@ def footer():
         <li><a href="/">Αρχική</a></li>
         <li><a href="/to-grafeio/">Το Γραφείο</a></li>
         <li><a href="/ypiresies/">Υπηρεσίες</a></li>
+        <li><a href="/ekthesiakos-xoros/">Εκθεσιακός Χώρος</a></li>
         <li><a href="/ti-kano-tora/">Τι κάνω τώρα</a></li>
         <li><a href="/epikoinonia/">Επικοινωνία</a></li>
       </ul>
@@ -663,6 +664,37 @@ build_page("/to-grafeio/", "Το Γραφείο · Γραφείο Τελετών
            [("Αρχική", "/"), ("Το Γραφείο", "/to-grafeio/")], about_body,
            [{"@type": "AboutPage", "url": url("/to-grafeio/"), "mainEntity": {"@id": url("/#funeralhome")}}])
 PAGES.append(("/to-grafeio/", "0.8"))
+
+# ================================================================= ΕΚΘΕΣΙΑΚΟΣ ΧΩΡΟΣ
+COFFINS = 21  # images/feretra/lt-NN.jpg (κύρια) + lt-NN-b.jpg (λεπτομέρεια, εμφανίζεται στο hover)
+def lt_code(n):
+    return f'<span class="lt-code"><img src="/images/logo-lt.svg" alt="ΛΤ" width="30" height="27">{n}</span>'
+coffin_cards = "".join(
+    f"""<figure class="coffin">
+      <div class="coffin-img"><img src="/images/feretra/lt-{n:02d}.jpg" alt="Φέρετρο ΛΤ{n}" width="800" height="600" loading="lazy" decoding="async"><img class="alt" src="/images/feretra/lt-{n:02d}-b.jpg" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+      <figcaption>Φέρετρο {lt_code(n)}</figcaption>
+    </figure>""" for n in range(1, COFFINS + 1))
+showroom_body = page_hero([("Αρχική", "/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/")],
+    "Εκθεσιακός χώρος",
+    "Δείτε τα φέρετρα που διαθέτουμε. Μπορείτε να τα δείτε και από κοντά στα γραφεία μας στην Αργυρούπολη και τη Γλυφάδα, και θα σας βοηθήσουμε να επιλέξετε με ηρεμία.") + f"""
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Λάζαρος Τογρίδης</p>
+      <h2 class="section-title">Φέρετρα</h2>
+      <p class="lead">Για κάθε μοντέλο, ρωτήστε μας με τον κωδικό του (π.χ. ΛΤ1) για διαθεσιμότητα και τιμή.</p>
+    </div>
+    <div class="coffins">{coffin_cards}
+    </div>
+  </div>
+</section>
+{cta_band()}
+"""
+build_page("/ekthesiakos-xoros/", "Εκθεσιακός Χώρος · Φέρετρα · Γραφείο Τελετών Λάζαρος Τογρίδης",
+           "Δείτε τα φέρετρα του εκθεσιακού μας χώρου στην Αργυρούπολη και τη Γλυφάδα. Μεγάλη γκάμα σε ξύλο και αποχρώσεις, με σαφή ενημέρωση για διαθεσιμότητα και τιμή.",
+           [("Αρχική", "/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/")], showroom_body,
+           [{"@type": "CollectionPage", "url": url("/ekthesiakos-xoros/"), "about": {"@id": url("/#funeralhome")}}])
+PAGES.append(("/ekthesiakos-xoros/", "0.8"))
 
 # ================================================================= SERVICES INDEX
 svc_index_body = page_hero([("Αρχική", "/"), ("Υπηρεσίες", "/ypiresies/")],

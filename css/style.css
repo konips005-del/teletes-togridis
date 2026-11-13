@@ -361,7 +361,7 @@ a.contact-card:hover { border-color: var(--green-2); }
 /* =========================================================
    Responsive
    ========================================================= */
-@media (max-width: 1150px) {
+@media (max-width: 1180px) {
   .nav, .header-cta .btn-ghost { display: none; }
   .menu-toggle { display: grid; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -481,3 +481,19 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
 .section-head.center .section-title::before, .section-head.center .section-title::after { content: ""; flex: 1; max-width: 200px; height: 1px; background: var(--line); }
 .split .section-title::after { content: ""; display: block; width: 32px; height: 2px; background: var(--green); margin-top: 14px; }
 .btn { border-radius: 2px; font-weight: 500; }
+
+/* Εκθεσιακός χώρος */
+.eyebrow { color: var(--green); font-size: 14px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+.coffins { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; margin-top: 48px; }
+.coffin { margin: 0; text-align: center; }
+.coffin-img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #fff; }
+.coffin-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity .4s ease, transform .6s ease; }
+.coffin-img img.alt { opacity: 0; }
+.coffin:hover .coffin-img img.alt { opacity: 1; }
+.coffin:hover .coffin-img img:not(.alt) { opacity: 0; }
+.coffin figcaption { margin-top: 14px; font-size: 18px; font-weight: 700; color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 8px; }
+.lt-code { display: inline-flex; align-items: center; gap: 2px; font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1; color: var(--green); }
+.lt-code img { width: 46px; height: auto; }
+@media (max-width: 900px) { .coffins { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; } }
+@media (max-width: 520px) { .coffins { grid-template-columns: 1fr; } }
+@media (max-width: 1600px) { .header-cta .btn-ghost { display: none; } }
