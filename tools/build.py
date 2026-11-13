@@ -486,7 +486,7 @@ home_body = f"""<section class="hero">
   <div class="wrap">
     <div>
       <p class="hero-label">Λάζαρος Τογρίδης · Από το 1990</p>
-      <h1 class="hero-title">Γραφείο Τελετών σε Αργυρούπολη και Γλυφάδα</h1>
+      <h1 class="hero-title">Γραφεία Τελετών σε Αργυρούπολη και Γλυφάδα</h1>
       <p class="lead">Οργανώνουμε κηδείες, αποτεφρώσεις και μνημόσυνα με σεβασμό και διακριτικότητα, και αναλαμβάνουμε όλα τα διαδικαστικά. Είμαστε διαθέσιμοι 24 ώρες το 24ωρο, 365 ημέρες τον χρόνο.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="tel:{BIZ['phone_tel']}">{I['phone']}Κλήση 24/7 · {BIZ['phone']}</a>
