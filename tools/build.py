@@ -537,7 +537,7 @@ home_body = f"""<section class="hero">
 <section class="section alt">
   <div class="wrap split">
     <div class="about-visual">
-      {photo("Η πρόσοψη του γραφείου τελετών Τογρίδη στην Κύπρου 74, Αργυρούπολη", src="grafeio-prosopsi.jpg", pos="center 70%")}
+      {photo("Ο Λάζαρος Τογρίδης", src="lazaros-togridis.jpg", pos="center 30%")}
     </div>
     <div>
       <h2 class="section-title">Λίγα λόγια για εμάς</h2>
