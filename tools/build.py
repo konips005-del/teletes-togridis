@@ -293,7 +293,7 @@ def header(active):
 <div class="topbar">
   <div class="wrap">
     <div class="tb-left"><span><span class="dot"></span>Εξυπηρέτηση 24 ώρες, 365 ημέρες</span><span class="hide-sm">Γραφεία σε Αργυρούπολη &amp; Γλυφάδα</span></div>
-    <div class="tb-right"><a href="tel:{BIZ['phone_tel']}">{BIZ['phone']}</a><a href="tel:{BIZ['mobile_tel']}">{BIZ['mobile']}</a></div>
+    <div class="tb-right"><a href="tel:{BIZ['phone_tel']}">{BIZ['phone']}</a><a href="tel:{BIZ2['phone_tel']}">{BIZ2['phone']}</a><a href="tel:{BIZ['mobile_tel']}">{BIZ['mobile']}</a></div>
   </div>
 </div>
 <header class="site-header">
