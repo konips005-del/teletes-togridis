@@ -481,7 +481,7 @@ HOME_FAQ = [
 
 MAP_SWITCH = "".join('<button type="button" role="tab" aria-selected="%s" data-src="%s">%s%s</button>' % ("true" if i == 0 else "false", o[5], I["pin"], o[0]) for i, o in enumerate(OFFICES))
 home_body = f"""<section class="hero">
-  <div class="hero-bg"><img src="/images/hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero-bg"><img src="/images/hero-prosopsi.jpg" alt="" fetchpriority="high" style="object-position:center 58%"></div>
   <canvas class="fx-particles" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
