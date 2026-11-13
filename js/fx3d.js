@@ -180,7 +180,7 @@ function candle(canvas) {
   const light = new THREE.PointLight(0xffb066, 4, 8, 2);
   light.position.set(0, 2.05, 0);
   scene.add(light);
-  scene.add(new THREE.HemisphereLight(0xdfe8e2, 0x1c2b24, 0.55));
+  scene.add(new THREE.HemisphereLight(0xf0e2e6, 0x5a001f, 0.55));
   const fill = new THREE.DirectionalLight(0xffffff, 0.35); fill.position.set(2, 3, 4); scene.add(fill);
 
   runWhenVisible(canvas, (t) => {

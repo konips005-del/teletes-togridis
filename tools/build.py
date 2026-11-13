@@ -251,7 +251,7 @@ def head(path, title, desc, ld):
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css?v={ASSET_V}">
   <script>document.documentElement.classList.add("js");setTimeout(function(){{if(!window.__fx)document.documentElement.classList.remove("js")}},2500)</script>
   <script type="application/ld+json">
@@ -260,10 +260,11 @@ def head(path, title, desc, ld):
 </head>
 """
 
-def brand():
+def brand(light=False):
+    logo = "logo-lt-white.svg" if light else "logo-lt.svg"
     return f"""<a class="brand" href="/" aria-label="{esc(BIZ['name'])}, αρχική σελίδα">
-        <span class="brand-mark">{I['flame']}</span>
-        <span class="brand-text"><span class="brand-name">Λάζαρος Τογρίδης</span><span class="brand-sub">Γραφείο Τελετών · από το 1990</span></span>
+        <img class="brand-mark" src="/images/{logo}" alt="" width="52" height="46">
+        <span class="brand-text"><span class="brand-name">ΛΑΖΑΡΟΣ ΤΟΓΡΙΔΗΣ</span><span class="brand-sub">ΓΡΑΦΕΙΑ ΚΟΙΝΩΝΙΚΗΣ ΕΞΥΠΗΡΕΤΗΣΗΣ</span></span>
       </a>"""
 
 def header(active):
@@ -324,7 +325,7 @@ def footer():
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      {brand()}
+      {brand(light=True)}
       <p>Γραφείο τελετών στην Αργυρούπολη και τη Γλυφάδα από το 1990. Με σεβασμό, αξιοπρέπεια και διακριτικότητα, δίπλα σας στις πιο δύσκολες στιγμές.</p>
     </div>
     <div>
