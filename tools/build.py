@@ -48,7 +48,7 @@ OFFICES = [
 
 AREAS_MAIN = "Αργυρούπολη"
 AREAS = ["Γλυφάδα", "Ελληνικό", "Άλιμος", "Άγιος Δημήτριος", "Ηλιούπολη", "Βούλα", "Βάρη",
-         "Βουλιαγμένη", "Παλαιό Φάληρο", "Νέα Σμύρνη", "Καλλιθέα", "Δάφνη", "Υμηττός", "Όλη η Αττική"]
+         "Βουλιαγμένη", "Παλαιό Φάληρο", "Νέα Σμύρνη", "Καλλιθέα", "Δάφνη", "Υμηττός", "Όλη η Αττική", "Όλη η Ελλάδα", "Εξωτερικό"]
 
 # ----------------------------------------------------------------- icons
 def svg(inner, stroke=1.6):
@@ -198,7 +198,7 @@ def business_ld():
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "00:00", "closes": "23:59",
         },
-        "areaServed": [{"@type": "Place", "name": a} for a in [AREAS_MAIN] + AREAS[:-1]] + [{"@type": "AdministrativeArea", "name": "Αττική"}],
+        "areaServed": [{"@type": "Place", "name": a} for a in [AREAS_MAIN] + AREAS[:-3]] + [{"@type": "AdministrativeArea", "name": "Αττική"}, {"@type": "Country", "name": "Ελλάδα"}],
         "hasOfferCatalog": {
             "@type": "OfferCatalog", "name": "Υπηρεσίες γραφείου τελετών",
             "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": s["title"], "url": url("/ypiresies/%s/" % s["slug"])}} for s in SERVICES],
