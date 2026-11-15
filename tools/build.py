@@ -239,7 +239,7 @@ def graph(path, title, desc, crumbs, extra=None):
     nodes += extra or []
     return json.dumps({"@context": "https://schema.org", "@graph": nodes}, ensure_ascii=False, indent=2)
 
-NAV = [("Αρχική", "/"), ("Το Γραφείο", "/to-grafeio/"), ("Υπηρεσίες", "/ypiresies/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/"), ("Live Streaming", "/ypiresies/live-streaming/"), ("Τι κάνω τώρα", "/ti-kano-tora/"), ("Επικοινωνία", "/epikoinonia/")]
+NAV = [("Αρχική", "/"), ("Το Γραφείο", "/to-grafeio/"), ("Υπηρεσίες", "/ypiresies/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/"), ("Live Streaming", "/ypiresies/live-streaming/"), ("Ανθοστολισμός", "/ypiresies/anthostolismos/"), ("Τι κάνω τώρα", "/ti-kano-tora/"), ("Επικοινωνία", "/epikoinonia/")]
 
 def head(path, title, desc, ld):
     full_title = title
