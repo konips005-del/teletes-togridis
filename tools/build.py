@@ -670,14 +670,18 @@ build_page("/to-grafeio/", "Το Γραφείο · Γραφείο Τελετών
 PAGES.append(("/to-grafeio/", "0.8"))
 
 # ================================================================= ΕΚΘΕΣΙΑΚΟΣ ΧΩΡΟΣ
-COFFINS = 21  # images/feretra/lt-NN.jpg (κύρια) + lt-NN-b.jpg (λεπτομέρεια, εμφανίζεται στο hover)
+# Σειρά εμφάνισης = αρίθμηση ΛΤ1, ΛΤ2, …  (κύρια εικόνα, εικόνα λεπτομέρειας για hover ή None)
+COFFIN_IMGS = ([(f"fw-{n:02d}.jpg", None) for n in range(1, 32)] +          # Florina Wood (μπαίνουν πρώτα)
+               [(f"lt-{n:02d}.jpg", f"lt-{n:02d}-b.jpg") for n in range(1, 22)])
 def lt_code(n):
     return f'<span class="lt-code"><img src="/images/logo-lt.svg" alt="ΛΤ" width="30" height="27">{n}</span>'
-coffin_cards = "".join(
-    f"""<figure class="coffin">
-      <div class="coffin-img"><img src="/images/feretra/lt-{n:02d}.jpg" alt="Φέρετρο ΛΤ{n}" width="800" height="600" loading="lazy" decoding="async"><img class="alt" src="/images/feretra/lt-{n:02d}-b.jpg" alt="" width="800" height="600" loading="lazy" decoding="async"></div>
+def coffin_card(n, main, alt):
+    alt_img = (f'<img class="alt" src="/images/feretra/{alt}" alt="" width="800" height="600" loading="lazy" decoding="async">' if alt else "")
+    return f"""<figure class="coffin">
+      <div class="coffin-img"><img src="/images/feretra/{main}" alt="Φέρετρο ΛΤ{n}" width="800" height="600" loading="lazy" decoding="async">{alt_img}</div>
       <figcaption>Φέρετρο {lt_code(n)}</figcaption>
-    </figure>""" for n in range(1, COFFINS + 1))
+    </figure>"""
+coffin_cards = "".join(coffin_card(n, m, a) for n, (m, a) in enumerate(COFFIN_IMGS, 1))
 showroom_body = page_hero([("Αρχική", "/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/")],
     "Εκθεσιακός χώρος",
     "Δείτε τα φέρετρα που διαθέτουμε. Μπορείτε να τα δείτε και από κοντά στα γραφεία μας στην Αργυρούπολη και τη Γλυφάδα, και θα σας βοηθήσουμε να επιλέξετε με ηρεμία.") + f"""
