@@ -696,10 +696,12 @@ COFFIN_IMGS = ([(f"fw-{n:02d}.jpg", None) for n in range(1, 32)] +          # Fl
                [(f"lt-{n:02d}.jpg", f"lt-{n:02d}-b.jpg") for n in range(1, 22)])
 def lt_code(n):
     return f'<span class="lt-code"><img src="/images/logo-lt.svg" alt="ΛΤ" width="30" height="27">{n}</span>'
+def img_v(rel):  # cache-busting: ?v=<hash περιεχομένου>
+    return "/images/feretra/%s?v=%s" % (rel, hashlib.md5(open(os.path.join(ROOT, "images", "feretra", rel), "rb").read()).hexdigest()[:8])
 def coffin_card(n, main, alt):
-    alt_img = (f'<img class="alt" src="/images/feretra/{alt}" alt="" width="800" height="600" loading="lazy" decoding="async">' if alt else "")
+    alt_img = (f'<img class="alt" src="{img_v(alt)}" alt="" width="800" height="600" loading="lazy" decoding="async">' if alt else "")
     return f"""<figure class="coffin">
-      <div class="coffin-img"><img src="/images/feretra/{main}" alt="Φέρετρο ΛΤ{n}" width="800" height="600" loading="lazy" decoding="async">{alt_img}</div>
+      <div class="coffin-img"><img src="{img_v(main)}" alt="Φέρετρο ΛΤ{n}" width="800" height="600" loading="lazy" decoding="async">{alt_img}</div>
       <figcaption>Φέρετρο {lt_code(n)}</figcaption>
     </figure>"""
 coffin_cards = "".join(coffin_card(n, m, a) for n, (m, a) in enumerate(COFFIN_IMGS, 1))
