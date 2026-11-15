@@ -529,3 +529,5 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
   .hero-bg:has(img)::after { background: linear-gradient(90deg, rgba(30,10,16,.62) 0%, rgba(30,10,16,.42) 40%, rgba(30,10,16,.18) 60%, rgba(30,10,16,.25) 100%); }
   .hero-title, .hero .lead, .hero-label, .hero-facts { text-shadow: 0 2px 14px rgba(0,0,0,.55), 0 1px 3px rgba(0,0,0,.5); }
 }
+/* Κάθετη φωτογραφία μέσα σε κείμενο (π.χ. στεφάνια) */
+.prose .photo.portrait { min-height: 0; aspect-ratio: 3 / 4; width: min(100%, 520px); margin-inline: auto; }
