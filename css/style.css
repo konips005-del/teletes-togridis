@@ -508,3 +508,15 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
   .services-grid > :nth-child(7):last-child { grid-column: span 2; }
 }
 @media (max-width: 720px) { .services-grid > :nth-child(7):last-child { grid-column: span 1; } }
+/* Header με 7 στοιχεία μενού */
+.site-header .wrap { width: min(1360px, 100% - 48px); gap: 16px; }
+.nav > a, .nav .dd > button { padding: 10px 10px; }
+@media (max-width: 1440px) {
+  .nav > a, .nav .dd > button { font-size: 14.5px; padding: 9px 8px; }
+  .brand-name { font-size: 19px; letter-spacing: .1em; }
+  .brand-sub { font-size: 10.5px; letter-spacing: .07em; }
+}
+@media (max-width: 1340px) {
+  .nav, .header-cta .btn-ghost { display: none; }
+  .menu-toggle { display: grid; }
+}
