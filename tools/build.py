@@ -9,7 +9,7 @@ import os
 from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://teletestogridis.gr"  # προτεινόμενο domain — άλλαξέ το όταν αγοραστεί
+SITE = "https://teletestogridis.gr"
 TODAY = date.today().isoformat()
 
 BIZ = {
