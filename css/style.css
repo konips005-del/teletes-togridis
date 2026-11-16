@@ -72,7 +72,7 @@ ul { margin: 0; padding: 0; }
 .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { width: 52px; height: auto; flex: none; }
+.brand-mark { width: 62px; height: auto; flex: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-name { font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--green); white-space: nowrap; }
 .brand-sub { font-family: var(--serif); font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--green); white-space: nowrap; margin-top: 3px; }
@@ -397,7 +397,7 @@ a.contact-card:hover { border-color: var(--green-2); }
   .site-header .wrap { min-height: 66px; }
   .brand-name { font-size: 17px; letter-spacing: .08em; }
   .brand-sub { font-size: 9.5px; letter-spacing: .05em; }
-  .brand-mark { width: 44px; }
+  .brand-mark { width: 52px; }
   .header-cta .btn-primary { display: none; }
   .hero .lead { font-size: 17px; }
   .hero-actions .btn { flex: 1 1 100%; }

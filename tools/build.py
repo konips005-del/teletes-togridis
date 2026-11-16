@@ -285,9 +285,9 @@ def head(path, title, desc, ld):
 """
 
 def brand(light=False):
-    logo = "logo-lt-white.svg" if light else "logo-lt.svg"
+    logo = "logo-etke-white.svg" if light else "logo-etke.svg"
     return f"""<a class="brand" href="/" aria-label="{esc(BIZ['name'])}, αρχική σελίδα">
-        <img class="brand-mark" src="/images/{logo}" alt="" width="52" height="46">
+        <img class="brand-mark" src="/images/{logo}" alt="" width="62" height="45">
         <span class="brand-text"><span class="brand-name">ΛΑΖΑΡΟΣ ΤΟΓΡΙΔΗΣ</span><span class="brand-sub">ΓΡΑΦΕΙΑ ΚΟΙΝΩΝΙΚΗΣ ΕΞΥΠΗΡΕΤΗΣΗΣ</span></span>
       </a>"""
 
