@@ -531,3 +531,11 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
 }
 /* Κάθετη φωτογραφία μέσα σε κείμενο (π.χ. στεφάνια) */
 .prose .photo.portrait { min-height: 0; aspect-ratio: 3 / 4; width: min(100%, 520px); margin-inline: auto; }
+/* Οθόνες laptop (1000–1400px): το μενού σε δεύτερη γραμμή κάτω από το λογότυπο, όχι κρυμμένο στο ☰ */
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .site-header .wrap { flex-wrap: wrap; row-gap: 0; }
+  .site-header .nav { display: flex; order: 3; width: 100%; justify-content: center; gap: 6px; border-top: 1px solid var(--line); padding: 4px 0; }
+  .site-header .menu-toggle { display: none; }
+  .site-header .brand, .site-header .header-cta { padding: 12px 0; }
+  body.menu-open .mobile-nav { display: none; }
+}
