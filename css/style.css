@@ -495,6 +495,7 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
 .coffin figcaption { margin-top: 14px; font-size: 18px; font-weight: 700; color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 8px; }
 .lt-code { display: inline-flex; align-items: center; gap: 2px; font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1; color: var(--green); }
 .lt-code img { width: 46px; height: auto; }
+.model-code { font-size: 15px; font-weight: 400; color: var(--muted, #6b5e63); border-left: 1px solid #d9cdd2; padding-left: 10px; margin-left: 4px; }
 @media (max-width: 900px) { .coffins { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; } }
 @media (max-width: 520px) { .coffins { grid-template-columns: 1fr; } }
 .header-cta .btn-ghost { display: none; }

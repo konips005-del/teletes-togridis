@@ -692,19 +692,24 @@ PAGES.append(("/to-grafeio/", "0.8"))
 
 # ================================================================= ΕΚΘΕΣΙΑΚΟΣ ΧΩΡΟΣ
 # Σειρά εμφάνισης = αρίθμηση ΛΤ1, ΛΤ2, …  (κύρια εικόνα, εικόνα λεπτομέρειας για hover ή None)
-COFFIN_IMGS = ([(f"fw-{n:02d}.jpg", None) for n in range(1, 32)] +          # Florina Wood (μπαίνουν πρώτα)
-               [(f"lt-{n:02d}.jpg", f"lt-{n:02d}-b.jpg") for n in range(1, 22)])
+# Κωδικοί μοντέλου Florina Wood (από florinawood.com/index.php/products), με τη σειρά fw-01 … fw-31
+FW_MODELS = ["Α1", "Α2", "Α3", "Α4", "Α4", "Α5", "Α5", "Β1", "Β2", "Β3", "Β4", "Β4/ΣΚ",
+             "Ρ1", "Ρ2", "Ρ3", "Ρ4", "Ρ5", "Ρ6", "Ρ8", "Ρ10",
+             "Σ1", "Σ3", "Σ4", "Σ5", "Σ6", "Σ7", "Σ8", "Σ9", "ΣΚΑΦΗ", "Τ1", "Τ2"]
+COFFIN_IMGS = ([(f"fw-{n:02d}.jpg", None, FW_MODELS[n - 1]) for n in range(1, 32)] +   # Florina Wood (μπαίνουν πρώτα)
+               [(f"lt-{n:02d}.jpg", f"lt-{n:02d}-b.jpg", None) for n in range(1, 22)])
 def lt_code(n):
     return f'<span class="lt-code"><img src="/images/logo-lt.svg" alt="ΛΤ" width="30" height="27">{n}</span>'
 def img_v(rel):  # cache-busting: ?v=<hash περιεχομένου>
     return "/images/feretra/%s?v=%s" % (rel, hashlib.md5(open(os.path.join(ROOT, "images", "feretra", rel), "rb").read()).hexdigest()[:8])
-def coffin_card(n, main, alt):
+def coffin_card(n, main, alt, model=None):
+    model_html = f'<span class="model-code">Μοντέλο {model}</span>' if model else ""
     alt_img = (f'<img class="alt" src="{img_v(alt)}" alt="" width="800" height="600" loading="lazy" decoding="async">' if alt else "")
     return f"""<figure class="coffin">
       <div class="coffin-img"><img src="{img_v(main)}" alt="Φέρετρο ΛΤ{n}" width="800" height="600" loading="lazy" decoding="async">{alt_img}</div>
-      <figcaption>Φέρετρο {lt_code(n)}</figcaption>
+      <figcaption>Φέρετρο {lt_code(n)}{model_html}</figcaption>
     </figure>"""
-coffin_cards = "".join(coffin_card(n, m, a) for n, (m, a) in enumerate(COFFIN_IMGS, 1))
+coffin_cards = "".join(coffin_card(n, *c) for n, c in enumerate(COFFIN_IMGS, 1))
 showroom_body = page_hero([("Αρχική", "/"), ("Εκθεσιακός Χώρος", "/ekthesiakos-xoros/")],
     "Εκθεσιακός χώρος",
     "Δείτε τα φέρετρα που διαθέτουμε. Μπορείτε να τα δείτε και από κοντά στα γραφεία μας στην Αργυρούπολη και τη Γλυφάδα, και θα σας βοηθήσουμε να επιλέξετε με ηρεμία.") + f"""
