@@ -540,4 +540,4 @@ html.js .rv.in.tilt { transition: transform .3s ease-out, opacity .7s ease, box-
   body.menu-open .mobile-nav { display: none; }
 }
 /* Φωτογραφία Λάζαρου στο «Λίγα λόγια για εμάς»: κάθετο πλαίσιο */
-.photo.about-portrait { min-height: 0; aspect-ratio: 4 / 5; width: min(100%, 460px); justify-self: center; }
+.photo.about-portrait { min-height: 0; aspect-ratio: 4 / 5; width: min(100%, 460px); margin-inline: auto; }
